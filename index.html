@@ -1,0 +1,3241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASAS 1 Bahasa Indonesia TA 2026/2027 — Kelas XII SMAN 1 Sukaraja</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            sunda: {
+              dark: '#1b4337',
+              primary: '#25594a',
+              light: '#357a66',
+              gold: '#d97706',
+              cream: '#faf8f5',
+              sand: '#f1ede4'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #faf8f5;
+      color: #1e293b;
+      user-select: none;
+    }
+    .batik-header {
+      background-color: #25594a;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1.2px, transparent 1.2px),
+                        radial-gradient(rgba(217, 119, 6, 0.16) 1.2px, #25594a 1.2px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1ede4; }
+    ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+    .drag-over-zone {
+      border-color: #25594a !important;
+      background-color: rgba(37, 89, 74, 0.09) !important;
+      transform: scale(1.01);
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-float { animation: floatSlow 3.6s ease-in-out infinite; }
+    .animate-fade-up { animation: fadeSlideUp 0.65s ease-out forwards; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+  <!-- ========================================================= -->
+  <!-- SPLASH SCREEN BATIK & AKSARA SUNDA SMAN 1 SUKARAJA        -->
+  <!-- ========================================================= -->
+  <div id="splashScreen" class="fixed inset-0 z-50 batik-header text-white flex items-center justify-center p-4 sm:p-6 overflow-y-auto transition-opacity duration-300">
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-amber-400/15 blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-emerald-300/15 blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-2xl w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 sm:p-10 text-center shadow-2xl animate-fade-up my-auto">
+      <!-- Institutional Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-300/40 text-amber-200 text-xs font-extrabold uppercase tracking-wider mb-5">
+        <span>SMAN 1 Sukaraja</span>
+        <span>•</span>
+        <span>Kabupaten Sukabumi</span>
+      </div>
+
+      <!-- Aksara Sunda Emblem -->
+      <div class="mx-auto w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-amber-500/20 border-2 border-amber-300/60 shadow-xl flex flex-col items-center justify-center mb-5 animate-float">
+        <span class="text-3xl sm:text-4xl font-extrabold text-amber-300 leading-none">ID</span>
+        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-100 mt-1.5">Bahasa Indonesia</span>
+      </div>
+
+      <!-- School & Exam Title -->
+      <div class="space-y-1.5">
+        <p class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] text-amber-300">
+          SMA Negeri 1 Sukaraja
+        </p>
+        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          ASESMEN SUMATIF AKHIR SEMESTER (ASAS) 1
+        </h1>
+        <h2 class="text-lg sm:text-2xl font-bold text-emerald-200">
+          Mata Pelajaran Bahasa Indonesia — Kelas XII
+        </h2>
+        <div class="pt-1">
+          <span class="inline-block px-4 py-1 rounded-xl bg-black/25 border border-white/15 text-xs sm:text-sm font-bold text-amber-200">
+            Tahun Ajaran 2026 / 2027
+          </span>
+        </div>
+      </div>
+
+      <!-- Materi Badges -->
+      <div class="mt-6 pt-5 border-t border-white/15 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold text-emerald-100">
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/10">📖 Infografis Tokoh Sastrawan</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/10">✍️ Tanda Petik</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/10">📚 Unsur Intrinsik Teks Naratif</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/10">🔎 Fakta, Fiksi, Opini &amp; Asumsi</span>
+        <span class="px-3 py-1 rounded-lg bg-white/10 border border-white/10">🎮 50 Soal CBT Interaktif</span>
+      </div>
+
+      <!-- Primary Action Buttons -->
+      <div class="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <button type="button" onclick="enterApplication('student')"
+          class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-slate-950 font-extrabold text-sm sm:text-base shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+          <span>🚀 Masuk ke Ruang Siswa</span>
+        </button>
+        <button type="button" id="btnSplashTeacher" onclick="enterApplication('teacher')"
+          class="hidden w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white/15 hover:bg-white/25 border border-white/25 text-white font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2 cursor-pointer">
+          <span>📊 Portal Rekap Guru</span>
+        </button>
+      </div>
+
+      <p class="mt-5 text-[11px] text-emerald-200/85">
+        Selamat mengerjakan ASAS Semester 1 • Semoga lancar dan memperoleh hasil yang memuaskan.
+      </p>
+
+      <!-- Subtle Proktor/Guru Mode Switcher in Footer of Splash -->
+      <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-center">
+        <button type="button" id="btnTogglePreviewModeSplash" onclick="requestTeacherModeUnlock()"
+          class="text-[11px] text-emerald-200/70 hover:text-amber-200 transition underline-offset-4 hover:underline cursor-pointer">
+          🔐 Mode Proktor / Guru
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- TOP NAVIGATION BAR                                        -->
+  <!-- ========================================================= -->
+  <header class="batik-header text-white shadow-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <button type="button" onclick="showSplashScreen()" title="Tampilkan Splash Screen"
+          class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300 font-extrabold text-lg shadow-inner shrink-0 cursor-pointer hover:scale-105 transition">
+          ID
+        </button>
+        <div>
+          <h1 class="font-bold text-sm sm:text-base leading-tight tracking-tight">ASAS 1 BAHASA INDONESIA — KELAS XII</h1>
+          <p class="text-[11px] sm:text-xs text-emerald-200/90">SMAN 1 Sukaraja • Tahun Ajaran 2026/2027</p>
+        </div>
+      </div>
+
+      <!-- Mode Switcher & Settings -->
+      <div class="flex items-center gap-2">
+        <nav class="flex bg-black/25 p-1 rounded-xl border border-white/10">
+          <button type="button" onclick="switchView('student')" id="navStudent"
+            class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-sunda-primary shadow-sm cursor-pointer">
+            Ruang Siswa
+          </button>
+          <button type="button" onclick="switchView('teacher')" id="navTeacher"
+            class="hidden px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-emerald-100 hover:text-white cursor-pointer">
+            Portal Guru
+          </button>
+        </nav>
+
+        <!-- Quick Teacher Mode Unlock Button when in Student Lock Mode -->
+        <button type="button" id="btnNavProctorLock" onclick="requestTeacherModeUnlock()" title="Buka Mode Guru / Proktor"
+          class="p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-emerald-100 transition-colors cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+        </button>
+
+        <button type="button" id="btnNavSetupGear" onclick="openSetupModal()" title="Pengaturan URL Google Apps Script"
+          class="hidden p-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-emerald-100 transition-colors relative cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span id="connectionDot" class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-amber-400 border border-sunda-dark"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- TOAST NOTIFICATION BANNER -->
+  <div id="toastBox" class="fixed bottom-4 right-4 z-50 max-w-sm w-full pointer-events-none flex flex-col gap-2 px-4 sm:px-0"></div>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 sm:py-8">
+
+    <!-- ========================================================= -->
+    <!-- VIEW 1: RUANG SISWA (LOBBY / IDENTITAS PESERTA UJIAN)      -->
+    <!-- ========================================================= -->
+    <section id="viewLobby" class="max-w-xl mx-auto">
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-200/80 overflow-hidden">
+        <div class="bg-sunda-sand/70 px-6 py-5 border-b border-stone-200/80">
+          <span class="inline-block px-2.5 py-1 rounded-full text-xs font-bold bg-sunda-primary/10 text-sunda-primary mb-2">
+            Selamat Datang • Ruang Siswa
+          </span>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-800">Identitas Peserta Ujian</h2>
+          <p class="text-sm text-slate-600 mt-1">Silakan isi data diri dengan benar sebelum memulai ujian.</p>
+        </div>
+
+        <div class="p-6 space-y-4">
+          <div id="loginErrorBox" class="hidden p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs sm:text-sm font-semibold"></div>
+
+          <div>
+            <label for="inputNama" class="block text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap</label>
+            <input type="text" id="inputNama" maxlength="80" placeholder="Contoh: Budi Santoso"
+              class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-sunda-primary focus:ring-2 focus:ring-sunda-primary/20 outline-none transition text-slate-800 font-medium" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="inputKelas" class="block text-sm font-semibold text-slate-700 mb-1.5">Kelas</label>
+              <select id="inputKelas"
+                class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-sunda-primary focus:ring-2 focus:ring-sunda-primary/20 outline-none transition bg-white text-slate-800 font-semibold cursor-pointer">
+                <option value="">-- Pilih Kelas --</option>
+                <option value="12.1-1">12.1-1</option>
+                <option value="12.1-2">12.1-2</option>
+                <option value="12.1-3">12.1-3</option>
+                <option value="12-2-1">12-2-1</option>
+                <option value="12.2-2">12.2-2</option>
+                <option value="12.2-3">12.2-3</option>
+                <option value="12.3-1">12.3-1</option>
+                <option value="12.3-2">12.3-2</option>
+                <option value="12.3-3">12.3-3</option>
+                <option value="12.4-1">12.4-1</option>
+                <option value="12.4-2">12.4-2</option>
+                <option value="12.4-3">12.4-3</option>
+              </select>
+            </div>
+            <div>
+              <label for="inputAbsen" class="block text-sm font-semibold text-slate-700 mb-1.5">Nomor Absen</label>
+              <input type="number" id="inputAbsen" min="1" max="50" placeholder="Contoh: 14"
+                class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-sunda-primary focus:ring-2 focus:ring-sunda-primary/20 outline-none transition text-slate-800 font-medium" />
+            </div>
+          </div>
+
+          <!-- Gerbang Keamanan Token Dinamis (6 Digit TOTP) -->
+          <div class="bg-sunda-sand/90 border-2 border-sunda-primary/30 rounded-2xl p-4 space-y-2.5">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <label for="inputToken" class="text-sm font-extrabold text-sunda-dark flex items-center gap-1.5">
+                <span>🔐</span>
+                <span>Token Ujian (6 Digit dari Guru / Proktor)</span>
+              </label>
+              <span id="studentUtcBadge" class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-md bg-white border border-stone-200 text-slate-600">
+                UTC Sync
+              </span>
+            </div>
+
+            <div class="relative">
+              <input type="text" id="inputToken" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="off"
+                placeholder="• • • • • •"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6)"
+                onkeydown="if(event.key==='Enter') startExam()"
+                class="w-full px-4 py-3 rounded-xl border-2 border-stone-300 focus:border-sunda-primary focus:ring-2 focus:ring-sunda-primary/20 outline-none transition bg-white text-center font-mono text-2xl font-extrabold tracking-[0.45em] text-sunda-dark placeholder:text-slate-300 placeholder:tracking-[0.3em]" />
+            </div>
+            <p class="text-[11px] text-slate-600 leading-snug">
+              *Kode token 6 angka berubah otomatis setiap <strong>60 detik</strong>. Silakan lihat di layar proyektor atau grup kelas dari guru.
+            </p>
+          </div>
+
+          <!-- Tata Tertib & Info Anti-Curang -->
+          <div class="bg-amber-50/90 border border-amber-200/80 rounded-xl p-4 text-xs sm:text-sm text-amber-900 space-y-1.5">
+            <div class="font-bold flex items-center gap-1.5 text-amber-800">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+              </svg>
+              Aturan Ujian &amp; Sistem Pengawas Otomatis:
+            </div>
+            <ul class="list-disc list-inside space-y-1 text-amber-900/90 pl-1">
+              <li>Jumlah soal ada <strong>50 soal</strong> berbasis penggalan teks (30 Pilihan Ganda, 10 Drag &amp; Drop, 10 Menjodohkan).</li>
+              <li>Tingkat kesulitan soal: <strong>50% Mudah, 30% Sedang, 20% Sulit</strong>.</li>
+              <li>Jangan berpindah tab browser atau membuka aplikasi lain selama ujian berlangsung (<strong>1x</strong> peringatan, <strong>2x</strong> status <em>Terindikasi Curang</em>).</li>
+              <li>Jika teridentifikasi melakukan kecurangan <strong>3 kali (3x pindah tab/layar)</strong>, ujian <strong>otomatis dihentikan</strong>, tidak bisa melanjutkan ke soal selanjutnya, dan nilai langsung terekam.</li>
+            </ul>
+          </div>
+
+          <button type="button" id="btnStartExam" onclick="startExam()"
+            class="w-full py-3.5 px-6 rounded-xl bg-sunda-primary hover:bg-sunda-dark active:scale-[0.99] text-white font-bold text-base shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>🚀 Mulai Ujian Sekarang</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 2: RUANG UJIAN CBT (60 SOAL & NAVIGASI)              -->
+    <!-- ========================================================= -->
+    <section id="viewExam" class="hidden space-y-5">
+      <!-- Top Exam Status Bar -->
+      <div class="bg-white rounded-2xl p-4 shadow-sm border border-stone-200/80 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <div id="examAvatar" class="w-10 h-10 rounded-xl bg-sunda-primary text-white font-extrabold flex items-center justify-center text-sm shadow-2xs">
+            AS
+          </div>
+          <div>
+            <div id="examStudentName" class="font-bold text-slate-800 text-sm sm:text-base">Peserta Ujian</div>
+            <div id="examStudentMeta" class="text-xs text-slate-500">Kelas • Absen</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5">
+          <div id="antiCheatBadge" class="px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <span class="w-2 h-2 rounded-full bg-current"></span>
+            <span id="antiCheatText">Status: Aman (0/3)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Exam Workspace Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+        <!-- Question Area (8 cols) -->
+        <div class="lg:col-span-8 bg-white rounded-2xl shadow-sm border border-stone-200/80 p-5 sm:p-6 space-y-5">
+          <!-- Question Badges -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-stone-100">
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="qNumberBadge" class="px-3 py-1 rounded-lg bg-sunda-primary text-white font-extrabold text-xs">
+                Soal No. 1 / 50
+              </span>
+              <span id="qTypeBadge" class="px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-bold text-xs">
+                Pilihan Ganda
+              </span>
+              <span id="qDiffBadge" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-emerald-100 text-emerald-800">
+                Mudah
+              </span>
+            </div>
+            <span id="qCategoryBadge" class="text-xs font-bold text-slate-500">Materi: Infografis Tokoh Sastrawan</span>
+          </div>
+
+          <!-- Optional Reading Passage Box (Teks Bacaan) -->
+          <div id="qPassageBox" class="hidden rounded-2xl bg-amber-50/75 border border-amber-200/90 p-4 sm:p-5 space-y-2 shadow-2xs">
+            <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-900">
+              <span>📜</span>
+              <span id="qPassageTitle">Teks Bacaan</span>
+            </div>
+            <blockquote id="qPassageText" class="text-sm sm:text-[15px] text-slate-800 leading-relaxed font-medium whitespace-pre-line border-l-4 border-amber-500 pl-3.5 py-0.5">
+              <!-- Populated by JS -->
+            </blockquote>
+          </div>
+
+          <!-- Question Stem -->
+          <div id="qText" class="text-base sm:text-lg font-bold text-slate-800 leading-relaxed">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Interactive Answer Options / DragDrop / Matching -->
+          <div id="qInteractiveBody" class="space-y-3">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Bottom Navigation Controls -->
+          <div class="pt-4 border-t border-stone-100 flex flex-wrap items-center justify-between gap-3">
+            <button type="button" id="btnPrev" onclick="prevQuestion()"
+              class="px-4 py-2.5 rounded-xl border border-stone-300 hover:bg-stone-50 disabled:opacity-40 disabled:pointer-events-none font-bold text-sm text-slate-700 transition flex items-center gap-1.5 cursor-pointer">
+              ← Sebelumnya
+            </button>
+
+            <button type="button" id="btnNext" onclick="nextQuestion()"
+              class="px-5 py-2.5 rounded-xl bg-sunda-primary hover:bg-sunda-dark text-white font-bold text-sm transition flex items-center gap-1.5 shadow-2xs cursor-pointer">
+              Berikutnya →
+            </button>
+
+            <button type="button" id="btnFinish" onclick="openSubmitModal()"
+              class="hidden px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition flex items-center gap-1.5 shadow-sm cursor-pointer">
+              ✓ Selesai &amp; Kumpulkan
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Grid Sidebar (4 cols) -->
+        <div class="lg:col-span-4 bg-white rounded-2xl shadow-sm border border-stone-200/80 p-5 sticky top-20">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-bold text-slate-800 text-sm">Daftar Nomor Soal</h3>
+            <span class="text-xs font-semibold text-sunda-primary" id="answeredCountText">0 / 50 Terisi</span>
+          </div>
+
+          <div id="questionGrid" class="grid grid-cols-6 sm:grid-cols-8 lg:grid-cols-5 gap-1.5 max-h-[300px] overflow-y-auto pr-1 mb-4">
+            <!-- Buttons populated by JS -->
+          </div>
+
+          <div class="space-y-1.5 text-xs text-slate-600 border-t border-stone-100 pt-3 mb-4">
+            <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-sunda-primary inline-block"></span> Sudah dijawab</div>
+            <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-stone-100 border border-stone-300 inline-block"></span> Belum dijawab</div>
+          </div>
+
+          <button type="button" onclick="openSubmitModal()"
+            class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-2xs transition cursor-pointer">
+            Kumpulkan Semua Jawaban
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 3: HASIL UJIAN & PEMBAHASAN                          -->
+    <!-- ========================================================= -->
+    <section id="viewResult" class="hidden max-w-2xl mx-auto space-y-6">
+      <div class="bg-white rounded-2xl shadow-sm border border-stone-200/80 overflow-hidden text-center">
+        <div class="batik-header text-white px-6 py-7">
+          <div id="resultHeaderIcon" class="w-14 h-14 rounded-2xl bg-white/15 border border-white/25 mx-auto flex items-center justify-center text-2xl mb-3">
+            🎉
+          </div>
+          <h2 id="resultHeaderTitle" class="text-xl sm:text-2xl font-extrabold">Terima Kasih!</h2>
+          <p id="resultHeaderSubtitle" class="text-emerald-100 text-sm mt-1">Jawaban ASAS 1 Bahasa Indonesia telah tercatat di sistem.</p>
+        </div>
+
+        <div class="p-6 space-y-5">
+          <!-- Auto-Terminate Cheat Banner (Shown if terminated at 3 violations) -->
+          <div id="cheatTerminatedBanner" class="hidden p-4 rounded-xl bg-rose-50 border-2 border-rose-500 text-rose-950 text-left space-y-1.5 shadow-xs">
+            <div class="font-extrabold text-sm text-rose-700 flex items-center gap-1.5">
+              <span>⛔</span>
+              <span>PERINGATAN: UJIAN DIHENTIKAN OTOMATIS (3x KECURANGAN)</span>
+            </div>
+            <p class="text-xs sm:text-sm leading-relaxed">
+              Anda <strong>tidak dapat melanjutkan soal selanjutnya</strong> karena sudah teridentifikasi melakukan kecurangan (keluar dari layar ujian / pindah tab) sebanyak <strong>3 kali</strong>. Nilai akhir dari jawaban yang telah terisi telah otomatis direkam ke sistem.
+            </p>
+          </div>
+
+          <!-- Sync Status Banner -->
+          <div id="syncStatusBox" class="p-3 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+            Data hasil ujian telah dikirim.
+          </div>
+
+          <!-- Score Card -->
+          <div class="bg-sunda-sand/70 rounded-2xl p-5 border border-stone-200/80">
+            <div class="text-xs uppercase tracking-wider font-bold text-slate-500">Nilai Akhir (Skor)</div>
+            <div class="text-5xl font-extrabold text-sunda-primary my-1" id="resSkor">0</div>
+            <div class="text-xs font-semibold text-slate-600" id="resBenar">Benar 0 dari 50 soal</div>
+          </div>
+
+          <!-- Detail Receipt -->
+          <div class="text-left text-sm space-y-2.5 border-t border-b border-stone-100 py-4">
+            <div class="flex justify-between">
+              <span class="text-slate-500">Nama Siswa</span>
+              <span class="font-bold text-slate-800" id="resNama">-</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Kelas / Absen</span>
+              <span class="font-bold text-slate-800" id="resKelasAbsen">-</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Status Pengawasan</span>
+              <span class="font-bold px-2 py-0.5 rounded text-xs" id="resStatus">-</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-500">Waktu Kumpul</span>
+              <span class="font-medium text-slate-700" id="resTime">-</span>
+            </div>
+          </div>
+
+          <!-- Analisis Per Materi -->
+          <div class="text-left">
+            <h3 class="text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-2.5">Analisis Pemahaman Per Materi</h3>
+            <div id="categoryBreakdown" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-2.5 pt-2">
+            <button type="button" onclick="resetToHome()" class="flex-1 py-2.5 px-4 rounded-xl border border-stone-300 hover:bg-stone-50 font-semibold text-sm text-slate-700 transition cursor-pointer">
+              Kembali ke Beranda
+            </button>
+            <button type="button" onclick="toggleReviewAnswers()" id="btnToggleReview" class="flex-1 py-2.5 px-4 rounded-xl bg-slate-400 text-white font-semibold text-sm transition cursor-not-allowed" aria-disabled="true">
+              🔒 Pembahasan Terkunci
+            </button>
+            <div id="reviewLockNote" class="sm:basis-full text-xs font-semibold text-slate-500 bg-stone-100 border border-stone-200 rounded-xl p-2.5">
+              Pembahasan akan terbuka setelah disetujui oleh guru/proktor. Tunggu sebentar, tombol akan aktif otomatis.
+            </div>
+            <button type="button" id="btnResultTeacher" onclick="switchView('teacher')" class="hidden flex-1 py-2.5 px-4 rounded-xl bg-sunda-primary hover:bg-sunda-dark text-white font-semibold text-sm transition cursor-pointer">
+              Portal Rekap Guru
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pembahasan Kunci Jawaban Section -->
+      <div id="reviewContainer" class="hidden bg-white rounded-2xl shadow-sm border border-stone-200/80 p-6 space-y-4">
+        <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+          <h3 class="text-lg font-extrabold text-slate-800">Kunci Jawaban &amp; Pembahasan</h3>
+          <span class="text-xs font-semibold text-slate-500">Bahan Belajar Mandiri</span>
+        </div>
+        <div id="reviewList" class="space-y-4">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- VIEW 4: PORTAL GURU (TOKEN PROKTOR, REKAP & LIVE MONITOR) -->
+    <!-- ========================================================= -->
+    <section id="viewTeacher" class="hidden space-y-6">
+      
+      <!-- Teacher Password Gate -->
+      <div id="teacherLoginGate" class="max-w-md mx-auto bg-white rounded-2xl shadow-sm border border-stone-200/80 overflow-hidden">
+        <div class="bg-sunda-sand/70 px-6 py-5 border-b border-stone-200/80">
+          <div class="w-12 h-12 rounded-xl bg-sunda-primary text-white flex items-center justify-center mb-3 shadow-2xs">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-extrabold text-slate-800">Portal Rekap &amp; Proktor Guru</h2>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">Halaman khusus guru untuk melihat token ujian, memantau siswa secara langsung, serta mengunduh rekap nilai.</p>
+        </div>
+        
+        <div class="p-6 space-y-4">
+          <div id="teacherGateError" class="hidden p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold"></div>
+
+          <div>
+            <label for="teacherPassInput" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Password Guru</label>
+            <div class="relative">
+              <input type="password" id="teacherPassInput" placeholder="Masukkan password guru"
+                onkeydown="if(event.key==='Enter') unlockTeacherDashboard()"
+                class="w-full pl-4 pr-11 py-2.5 rounded-xl border border-stone-300 focus:border-sunda-primary focus:ring-2 focus:ring-sunda-primary/20 outline-none text-slate-800 font-medium" />
+              <button type="button" onclick="toggleTeacherPassVisibility()" title="Tampilkan / Sembunyikan Password"
+                class="absolute inset-y-0 right-0 px-3 text-slate-400 hover:text-slate-700 flex items-center cursor-pointer">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+              </button>
+            </div>
+            
+          </div>
+
+          <button type="button" id="btnUnlockTeacher" onclick="unlockTeacherDashboard()" class="w-full py-3 px-4 rounded-xl bg-sunda-primary hover:bg-sunda-dark text-white font-bold text-sm transition shadow-sm cursor-pointer flex items-center justify-center gap-2">
+            <span>🔓 Buka Portal Rekap &amp; Proktor</span>
+          </button>
+
+          <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-xs text-slate-500">
+            <span id="gateConnectionHint">Status: Penyimpanan Lokal Browser</span>
+            <button type="button" onclick="openSetupModal()" class="text-sunda-primary font-bold hover:underline cursor-pointer">
+              Atur URL Google Sheet →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unlocked Teacher Dashboard -->
+      <div id="teacherDashboard" class="hidden space-y-5">
+        <!-- Top Action Bar -->
+        <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-stone-200/80 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <h2 class="text-lg sm:text-xl font-extrabold text-slate-800">Portal Guru — ASAS 1 Bahasa Indonesia</h2>
+              <span id="dataSourceBadge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
+                Penyimpanan Lokal
+              </span>
+            </div>
+            <p class="text-xs text-slate-500 mt-0.5">Kelola Token Ujian, Pantau Live Proktor, serta Unduh Rekap Nilai 12 Kelas XII.</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" onclick="openSetupModal()" class="px-3 py-2 rounded-xl border border-stone-300 hover:bg-stone-50 text-xs font-bold text-slate-700 transition cursor-pointer">
+              ⚙️ URL Google Sheet
+            </button>
+            <button type="button" onclick="reloadTeacherPortal()" class="px-3.5 py-2 rounded-xl bg-sunda-primary hover:bg-sunda-dark text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              Muat Ulang Semua
+            </button>
+            <button type="button" onclick="exportToCSV()" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer">
+              <span>📥 Unduh Rekap (CSV)</span>
+            </button>
+            <button type="button" onclick="lockTeacherDashboard()" title="Kunci Portal Guru" class="px-3 py-2 rounded-xl border border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold transition cursor-pointer">
+              🔒 Kunci
+            </button>
+          </div>
+        </div>
+
+        <!-- PANEL PROKTOR: TOKEN GERBANG UJIAN DINAMIS (6 DIGIT TOTP - 60 DETIK) -->
+        <div class="bg-gradient-to-br from-sunda-dark via-sunda-primary to-sunda-light text-white rounded-2xl p-5 sm:p-6 shadow-md border border-emerald-700/60">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+            <div class="space-y-1.5 max-w-xl">
+              <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-amber-400/20 border border-amber-300/40 text-amber-200 text-[11px] font-extrabold uppercase tracking-wider">
+                <span>🔐 Gerbang Keamanan TOTP • Interval 60 Detik</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-extrabold text-white">Token Akses Ujian Siswa</h3>
+              <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed">
+                Tampilkan kode 6 digit di samping pada proyektor atau bagikan ke grup kelas. Token berubah otomatis setiap <strong>60 detik</strong> berdasarkan sinkronisasi waktu UTC.
+              </p>
+              <div class="pt-1 flex flex-wrap items-center gap-3 text-[11px] text-emerald-200 font-mono">
+                <span id="teacherUtcClock">UTC: --:--:--</span>
+                <span>•</span>
+                <span id="teacherSyncStatus">Sinkronisasi Waktu: Aktif</span>
+              </div>
+            </div>
+
+            <div class="bg-black/25 backdrop-blur-xs border border-white/15 rounded-2xl p-4 sm:p-5 flex flex-col items-center sm:items-stretch min-w-[270px] sm:min-w-[320px] space-y-3">
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-200">Kode Token Saat Ini</span>
+                <span id="tokenCountdownBadge" class="px-2.5 py-0.5 rounded-lg bg-amber-400 text-slate-950 font-mono font-extrabold text-xs">
+                  60d
+                </span>
+              </div>
+
+              <div class="flex items-center justify-between gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
+                <div id="teacherTokenDisplay" class="font-mono text-4xl sm:text-5xl font-extrabold tracking-[0.22em] text-amber-300 select-all leading-none">
+                  ------
+                </div>
+                <button type="button" onclick="copyCurrentToken()" id="btnCopyToken"
+                  class="px-3.5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-slate-950 font-extrabold text-xs shadow-sm transition flex items-center gap-1.5 shrink-0 cursor-pointer">
+                  <span>📋 Salin Token</span>
+                </button>
+              </div>
+
+              <div class="space-y-1">
+                <div class="w-full h-2.5 rounded-full bg-black/35 overflow-hidden border border-white/10">
+                  <div id="tokenProgressBar" class="h-full bg-amber-400 transition-all duration-300 rounded-full" style="width: 100%;"></div>
+                </div>
+                <div class="flex justify-between text-[11px] text-emerald-200/90 font-medium">
+                  <span>Sisa waktu berlaku token</span>
+                  <span id="tokenCountdownText" class="font-mono font-bold text-amber-200">60 detik lagi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUB-TABS PORTAL GURU: REKAP NILAI VS LIVE MONITOR PROKTOR -->
+        <div class="bg-white rounded-2xl p-2.5 shadow-sm border border-stone-200/80 flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" onclick="switchTeacherSubTab('rekap')" id="subTabRekap"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-sunda-primary text-white shadow-2xs transition cursor-pointer">
+              📊 Rekap Nilai Siswa
+            </button>
+            <button type="button" onclick="switchTeacherSubTab('monitor')" id="subTabMonitor"
+              class="px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-stone-100 text-slate-700 hover:bg-stone-200 transition flex items-center gap-2 cursor-pointer">
+              <span>📡 Live Monitor Proktor</span>
+              <span id="liveActiveBadge" class="px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-600 text-white">0 Aktif</span>
+            </button>
+          </div>
+          <span class="text-xs text-slate-500 px-2 hidden sm:inline">12 Kelas Terdaftar: 12.1-1 s/d 12.4-3</span>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- SUB-PANEL A: REKAP NILAI SISWA                          -->
+        <!-- ======================================================= -->
+        <div id="panelTeacherRekap" class="space-y-5">
+          <!-- Data Source Selector Tabs -->
+          <div class="bg-white rounded-2xl p-3 shadow-sm border border-stone-200/80 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <button type="button" onclick="setRecapSourceMode('auto')" id="srcTabAuto"
+                class="px-3 py-1.5 rounded-xl text-xs font-bold bg-sunda-primary text-white shadow-2xs transition cursor-pointer">
+                Otomatis (Google Sheet / Lokal)
+              </button>
+              <button type="button" onclick="setRecapSourceMode('sheets')" id="srcTabSheets"
+                class="px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-slate-700 hover:bg-stone-200 transition cursor-pointer">
+                📊 Google Sheets Saja
+              </button>
+              <button type="button" onclick="setRecapSourceMode('local')" id="srcTabLocal"
+                class="px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-slate-700 hover:bg-stone-200 transition cursor-pointer">
+                💾 Rekaman Lokal Browser (<span id="localCountBadge">0</span>)
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button type="button" id="btnSyncLocalToSheet" onclick="syncLocalRecordsToSheets()"
+                class="hidden px-3 py-1.5 rounded-xl bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 text-xs font-bold transition cursor-pointer">
+                ☁️ Kirim Rekaman Lokal ke Google Sheet
+              </button>
+            </div>
+          </div>
+
+          <!-- Summary Stats Cards -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm">
+              <div class="text-xs font-semibold text-slate-500">Total Peserta</div>
+              <div class="text-2xl font-extrabold text-slate-800 mt-1" id="statTotal">0</div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm">
+              <div class="text-xs font-semibold text-slate-500">Rata-rata Nilai</div>
+              <div class="text-2xl font-extrabold text-sunda-primary mt-1" id="statAvg">0</div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm">
+              <div class="text-xs font-semibold text-slate-500">Nilai Tertinggi</div>
+              <div class="text-2xl font-extrabold text-emerald-600 mt-1" id="statMax">0</div>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-stone-200/80 shadow-sm">
+              <div class="text-xs font-semibold text-slate-500">Terindikasi Curang</div>
+              <div class="text-2xl font-extrabold text-rose-600 mt-1" id="statCheat">0</div>
+            </div>
+          </div>
+
+          <!-- Filter & Table Container -->
+          <div class="bg-white rounded-2xl shadow-sm border border-stone-200/80 overflow-hidden">
+            <div class="p-4 border-b border-stone-100 flex flex-wrap items-center justify-between gap-3">
+              <input type="text" id="searchRecapInput" oninput="renderRecapTable()" placeholder="Cari nama siswa, kelas, atau absen..."
+                class="w-full sm:w-64 px-3.5 py-2 rounded-xl border border-stone-300 text-sm focus:border-sunda-primary outline-none" />
+              
+              <div class="flex flex-wrap items-center gap-2">
+                <select id="filterKelasSelect" onchange="renderRecapTable()" class="px-3.5 py-2 rounded-xl border border-stone-300 text-sm bg-white outline-none font-semibold text-slate-700 cursor-pointer">
+                  <option value="ALL">Semua Kelas (12 Kelas)</option>
+                  <option value="12.1-1">12.1-1</option>
+                  <option value="12.1-2">12.1-2</option>
+                  <option value="12.1-3">12.1-3</option>
+                  <option value="12-2-1">12-2-1</option>
+                  <option value="12.2-2">12.2-2</option>
+                  <option value="12.2-3">12.2-3</option>
+                  <option value="12.3-1">12.3-1</option>
+                  <option value="12.3-2">12.3-2</option>
+                  <option value="12.3-3">12.3-3</option>
+                  <option value="12.4-1">12.4-1</option>
+                  <option value="12.4-2">12.4-2</option>
+                  <option value="12.4-3">12.4-3</option>
+                </select>
+
+                <select id="filterStatusSelect" onchange="renderRecapTable()" class="px-3.5 py-2 rounded-xl border border-stone-300 text-sm bg-white outline-none cursor-pointer">
+                  <option value="ALL">Semua Status</option>
+                  <option value="Aman">Status: Aman</option>
+                  <option value="Terindikasi Curang">Terindikasi Curang</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse text-sm">
+                <thead>
+                  <tr class="bg-sunda-primary text-white text-xs uppercase tracking-wider">
+                    <th class="py-3 px-4 font-bold">Timestamp</th>
+                    <th class="py-3 px-4 font-bold w-14 text-center">Hapus</th>
+                    <th class="py-3 px-4 font-bold">Nama Siswa</th>
+                    <th class="py-3 px-4 font-bold">Kelas</th>
+                    <th class="py-3 px-4 font-bold">No. Absen</th>
+                    <th class="py-3 px-4 font-bold">Skor Akhir</th>
+                    <th class="py-3 px-4 font-bold">Jumlah Benar (dari 50)</th>
+                    <th class="py-3 px-4 font-bold">Status Pelanggaran</th>
+                  </tr>
+                </thead>
+                <tbody id="recapTableBody" class="divide-y divide-stone-100">
+                  <!-- Rows populated by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- SUB-PANEL B: LIVE MONITOR PROKTOR REAL-TIME             -->
+        <!-- ======================================================= -->
+        <div id="panelTeacherMonitor" class="hidden space-y-4">
+          <div class="bg-white p-4 rounded-2xl border border-stone-200 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <input type="text" id="filterMonitorSearch" oninput="renderLiveMonitor()" placeholder="Cari nama siswa..."
+                class="w-full sm:w-56 px-3.5 py-2 rounded-xl border border-stone-300 text-sm outline-none focus:border-sunda-primary" />
+              <select id="filterKelasMonitor" onchange="renderLiveMonitor()" class="px-3 py-2 rounded-xl border border-stone-300 text-sm bg-white font-semibold text-slate-700 cursor-pointer">
+                <option value="ALL">Semua Kelas (12 Kelas)</option>
+                <option value="12.1-1">12.1-1</option>
+                <option value="12.1-2">12.1-2</option>
+                <option value="12.1-3">12.1-3</option>
+                <option value="12-2-1">12-2-1</option>
+                <option value="12.2-2">12.2-2</option>
+                <option value="12.2-3">12.2-3</option>
+                <option value="12.3-1">12.3-1</option>
+                <option value="12.3-2">12.3-2</option>
+                <option value="12.3-3">12.3-3</option>
+                <option value="12.4-1">12.4-1</option>
+                <option value="12.4-2">12.4-2</option>
+                <option value="12.4-3">12.4-3</option>
+              </select>
+              <select id="filterMonitorPhase" onchange="renderLiveMonitor()" class="px-3 py-2 rounded-xl border border-stone-300 text-sm bg-white cursor-pointer">
+                <option value="ALL">Semua Sesi</option>
+                <option value="UJIAN">Sedang Mengerjakan</option>
+                <option value="SELESAI">Sudah Selesai</option>
+              </select>
+            </div>
+            <button type="button" onclick="reloadTeacherPortal()" class="px-3 py-1.5 rounded-lg bg-sunda-primary hover:bg-sunda-dark text-white text-xs font-bold cursor-pointer">🔄 Muat Ulang</button>
+            <button type="button" onclick="approveAllReviews()" class="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-bold cursor-pointer">🔓 Setujui Semua Pembahasan</button>
+              <button type="button" onclick="lockAllReviews()" class="px-3 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold cursor-pointer">🔒 Kunci Semua</button>
+              <button type="button" onclick="clearLiveMonitorSessions()" class="px-3.5 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold transition cursor-pointer">
+              🗑️ Bersihkan Log Sesi
+            </button>
+          </div>
+
+          <div id="liveMonitorGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 1: KONFIRMASI PENGUMPULAN JAWABAN                   -->
+  <!-- ========================================================= -->
+  <div id="submitModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl border border-stone-200">
+      <h3 class="text-lg font-extrabold text-slate-800">Kumpulkan Jawaban Ujian?</h3>
+      <p class="text-sm text-slate-600 mt-2" id="submitModalSummary">
+        Pastikan semua soal sudah diperiksa. Jawaban yang sudah dikumpulkan tidak dapat diubah lagi.
+      </p>
+      <div class="mt-6 flex justify-end gap-2.5">
+        <button type="button" onclick="closeSubmitModal()" class="px-4 py-2.5 rounded-xl border border-stone-300 text-sm font-semibold text-slate-700 hover:bg-stone-50 cursor-pointer">
+          Periksa Lagi
+        </button>
+        <button type="button" onclick="submitExam()" class="px-5 py-2.5 rounded-xl bg-sunda-primary hover:bg-sunda-dark text-white text-sm font-bold shadow-sm cursor-pointer">
+          Ya, Kumpulkan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 2: PERINGATAN ANTI-CHEAT (1x, 2x & 3x LOCKOUT)      -->
+  <!-- ========================================================= -->
+  <div id="cheatModal" class="fixed inset-0 z-50 hidden bg-rose-950/80 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border-2 border-rose-600 text-center">
+      <div class="w-16 h-16 rounded-full bg-rose-100 text-rose-600 mx-auto flex items-center justify-center mb-3">
+        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+        </svg>
+      </div>
+      <h3 id="cheatModalTitle" class="text-xl font-extrabold text-rose-700">Peringatan Pengawasan!</h3>
+      <p class="text-sm text-slate-700 mt-2.5 leading-relaxed" id="cheatModalText">
+        Anda terdeteksi keluar dari layar ujian atau berpindah tab browser.
+      </p>
+      <button type="button" id="btnCloseCheatModal" onclick="closeCheatModal()" class="mt-5 w-full py-3 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm shadow-md cursor-pointer">
+        Mengerti, Lanjutkan Ujian
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 3: PENGATURAN URL GOOGLE APPS SCRIPT                -->
+  <!-- ========================================================= -->
+  <div id="setupModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-xl border border-stone-200 space-y-4">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+        <h3 class="text-lg font-extrabold text-slate-800">Koneksi Google Apps Script</h3>
+        <button type="button" onclick="closeSetupModal()" class="text-slate-400 hover:text-slate-700 font-bold text-xl leading-none cursor-pointer">&times;</button>
+      </div>
+
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+        Tempelkan <strong>Web App URL</strong> hasil deploy Google Apps Script Anda di bawah. Jika dikosongkan, aplikasi tetap berjalan menggunakan <strong>Penyimpanan Lokal</strong> untuk menyimpan hasil ujian di browser.
+      </p>
+
+      <div>
+        <label for="gasUrlInput" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Web App URL (Apps Script)</label>
+        <input type="url" id="gasUrlInput" placeholder="https://script.google.com/macros/s/.../exec"
+          class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-sunda-primary outline-none text-xs sm:text-sm font-mono text-slate-800" />
+      </div>
+
+      <div id="pingResultBox" class="hidden p-3 rounded-xl text-xs font-semibold"></div>
+
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-2">
+        <button type="button" onclick="clearLocalDemoData()" class="px-3 py-2 rounded-xl text-xs font-semibold text-rose-600 hover:bg-rose-50 transition cursor-pointer">
+          Hapus Rekaman Lokal
+        </button>
+        <div class="flex gap-2">
+          <button type="button" onclick="testGasConnection()" class="px-4 py-2 rounded-xl border border-stone-300 hover:bg-stone-50 text-xs font-bold text-slate-700 transition cursor-pointer">
+            Tes Koneksi
+          </button>
+          <button type="button" onclick="saveGasUrl()" class="px-4 py-2 rounded-xl bg-sunda-primary hover:bg-sunda-dark text-white text-xs font-bold shadow-sm transition cursor-pointer">
+            Simpan URL
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 4: VERIFIKASI MODE GURU / PROKTOR                   -->
+  <!-- ========================================================= -->
+  <div id="teacherModeModal" class="fixed inset-0 z-50 hidden bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-stone-200 space-y-4">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+        <h3 class="text-base font-extrabold text-slate-800 flex items-center gap-2">
+          <span>🔐</span>
+          <span>Akses Khusus Guru / Proktor</span>
+        </h3>
+        <button type="button" onclick="closeTeacherModeModal()" class="text-slate-400 hover:text-slate-700 font-bold text-xl leading-none cursor-pointer">&times;</button>
+      </div>
+      <p class="text-xs text-slate-600 leading-relaxed">
+        Mode standar dikunci untuk <strong>Ruang Siswa</strong>. Masukkan password guru untuk membuka menu <strong>Portal Rekap &amp; Proktor</strong>.
+      </p>
+      <div id="modeModalError" class="hidden p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold"></div>
+      <div>
+        <input type="password" id="modeModalPassInput" placeholder="Password guru"
+          onkeydown="if(event.key==='Enter') confirmTeacherModeModal()"
+          class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-sunda-primary outline-none text-sm font-medium text-slate-800" />
+      </div>
+      <div class="flex justify-end gap-2 pt-1">
+        <button type="button" onclick="closeTeacherModeModal()" class="px-4 py-2 rounded-xl border border-stone-300 text-xs font-bold text-slate-700 hover:bg-stone-50 cursor-pointer">
+          Batal
+        </button>
+        <button type="button" onclick="confirmTeacherModeModal()" class="px-4 py-2 rounded-xl bg-sunda-primary hover:bg-sunda-dark text-white text-xs font-bold shadow-sm cursor-pointer">
+          Buka Mode Guru
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- JAVASCRIPT APPLICATION LOGIC                              -->
+  <!-- ========================================================= -->
+  <script>
+    // =========================================================================
+    // 0. SPLASH SCREEN & CONSTANTS
+    // =========================================================================
+    const OFFICIAL_CLASSES = [
+      '12.1-1', '12.1-2', '12.1-3',
+      '12-2-1', '12.2-2', '12.2-3',
+      '12.3-1', '12.3-2', '12.3-3',
+      '12.4-1', '12.4-2', '12.4-3'
+    ];
+
+    window.enterApplication = function(targetMode) {
+      const splash = document.getElementById('splashScreen');
+      if (splash) {
+        splash.style.opacity = '0';
+        setTimeout(() => {
+          splash.classList.add('hidden');
+          splash.style.opacity = '1';
+        }, 300);
+      }
+      if (targetMode === 'teacher') {
+        switchView('teacher');
+      } else {
+        switchView('student');
+      }
+    };
+
+    window.showSplashScreen = function() {
+      if (state.examActive) {
+        showToast("Ujian sedang berlangsung, tidak dapat kembali ke splash screen.", "warning");
+        return;
+      }
+      const splash = document.getElementById('splashScreen');
+      if (splash) {
+        splash.classList.remove('hidden');
+        splash.style.opacity = '1';
+      }
+    };
+
+    // =========================================================================
+    // 1. BANK SOAL ASAS 1 BAHASA INDONESIA KELAS XII (50 SOAL, BERBASIS TEKS)
+    //    - 30 Pilihan Ganda (A-E) | 10 Drag & Drop | 10 Menjodohkan
+    //    - Tingkat kesulitan: 25 Mudah (50%), 15 Sedang (30%), 10 Sulit (20%)
+    //    - Materi: Infografis Tokoh Sastrawan, Tanda Petik, Unsur Intrinsik
+    //      Teks Naratif, Fakta-Fiksi-Opini-Asumsi dalam Teks Naratif
+    // =========================================================================
+    const C1 = 'Infografis Tokoh Sastrawan';
+    const C2 = 'Tanda Petik';
+    const C3 = 'Unsur Intrinsik Teks Naratif';
+    const C4 = 'Fakta, Fiksi, Opini, dan Asumsi';
+
+    const PS = {
+      jassin: ["Teks 1 — Infografik “Mozaik: Hans Bague Jassin”",
+        "HANS BAGUE JASSIN\nGorontalo, 13 Juli 1917 – Jakarta, 11 Maret 2000\n\n1927–1929: Bersekolah di HIS Balikpapan. Jassin mulai tertarik pada dokumentasi.\n1932–1939: Bersekolah di HBS Medan. Kecintaannya pada dokumentasi berlanjut. Setelah lulus, ia ke Jakarta menemui Sutan Takdir Alisjahbana.\n1 Februari 1940: Jassin ke Balai Pustaka membawa surat dari Sutan Takdir Alisjahbana dan beberapa tulisannya yang pernah diterbitkan. Hal itu memuluskan jalannya bekerja di Balai Pustaka.\n\nAyahnya, Bague Mantu Jassin, memengaruhi minat Jassin terhadap dokumentasi. Jassin menyimpan segala dokumen kesusastraan (buku, majalah, guntingan surat kabar, surat, foto) yang bertalian dengan kehidupan pengarang dan hasil kesusastraan.\nJassin dimakamkan di Taman Makam Pahlawan Kalibata."],
+      wiki: ["Teks 2 — Entri ensiklopedia daring",
+        "Hans Bague Jassin atau H.B. Jassin (lahir di Gorontalo, 13 Juli 1917; meninggal di Jakarta, 11 Maret 2000, pada usia 82 tahun) adalah seorang pengarang, penyunting, dan kritikus sastra berkebangsaan Indonesia. Tulisan-tulisannya menjadi sumber rujukan bagi pelajar dan mahasiswa yang mempelajari bahasa dan sastra Indonesia. Ia mendirikan Pusat Dokumentasi Sastra H.B. Jassin yang kemudian mendapat bantuan gedung dari Pemerintah Daerah DKI Jakarta di Taman Ismail Marzuki. Karena kiprahnya di bidang kritik dan dokumentasi sastra, ia dijuluki Paus Sastra Indonesia."],
+      artikel: ["Teks 3 — Ringkasan artikel tentang H.B. Jassin",
+        "Chairil Anwar pernah mengirimkan kartu pos bertitimangsa 8 Maret 1944 kepada sahabatnya, Hans Bague Jassin. Kartu pos itu disimpan rapi oleh Jassin bersama dokumentasi sastrawan lain. Koleksinya terus bertambah hingga dihimpun dalam Yayasan Dokumentasi Sastra H.B. Jassin yang diresmikan pada 1977.\nMenurut Pamusuk Eneste, minat Jassin terhadap dokumentasi sudah tampak sejak usia sekitar sepuluh tahun. Setelah lulus dari HBS Medan, Jassin singgah di Jakarta untuk menemui Sutan Takdir Alisjahbana, lalu pulang ke Gorontalo. Beberapa hari kemudian ia menerima surat dari Takdir yang mengajaknya bekerja sebagai redaktur buku di Balai Pustaka. Jassin tidak langsung menerima karena ayahnya melarangnya bekerja di Jakarta dan ingin ia menjadi amtenar di Gorontalo.\nSetelah lima bulan bekerja sebagai amtenar tanpa digaji, Jassin berangkat ke Jakarta dan diterima di Balai Pustaka pada 1 Februari 1940. Menurut Jassin, modal dasar dokumentasi sastra adalah ketekunan dan ketelitian, serta pemanfaatan dokumentasi itu oleh masyarakat, terutama untuk penelitian dan publikasi."],
+      chairil: ["Teks 4 — Infografik “Hidup dan Matinya Si Binatang Jalang”",
+        "CHAIRIL ANWAR\nLahir: Medan, 26 Juli 1922\n\n1942: Puisi “Nisan” pertama kali dimuat di Pandji Poestaka.\n1943: Menulis puisi “Aku”.\n1945: Puisi “Aku” diterbitkan majalah Timur.\n6 September 1946: Menikahi Hapsah.\n4 Oktober 1947: Anak pertamanya, Evawani Alissa, lahir.\nAkhir 1948: Bercerai dengan istrinya.\n28 April 1949: Chairil wafat akibat TBC.\n\nPeriode 1942–1949: 94 tulisan, terdiri atas 70 sajak asli (74,46%), 10 sajak terjemahan (10,63%), 6 prosa asli (6,38%), 4 prosa terjemahan (4,25%), dan 4 saduran (4,25%)."],
+      akurasi: ["Teks 5 — Cara mendeteksi akurasi informasi",
+        "Informasi yang diterima tidak boleh langsung ditelan mentah-mentah, tetapi perlu dikritisi dengan memeriksa empat hal berikut.\n1. Ketepatan penulisan: nama orang, nama tempat, nama organisasi/lembaga, dan nama peristiwa.\n2. Kesahihan sumber: pemberi informasi pertama dan kredibilitas narasumber.\n3. Kebenaran faktual: tokoh yang terlibat, tanggal dan tempat kejadian, angka dan jumlah, serta alur kejadian.\n4. Ketepatan pengutipan sumber: wawancara, hasil penelitian, buku, media berkala, dan media daring."],
+      validasi: ["Teks 6 — Data infografik dan unggahan media sosial",
+        "Data infografik (bersumber dari buku H.B. Jassin dan Pamusuk Eneste):\nChairil Anwar lahir di Medan, 26 Juli 1922. Pada 1942, puisi “Nisan” pertama kali dimuat di Pandji Poestaka. Pada 1945, puisi “Aku” diterbitkan majalah Timur. Chairil wafat pada 28 April 1949 akibat TBC.\n\nUnggahan sebuah akun media sosial:\nChairil Anwar lahir di Medan pada 26 Juli 1922. Puisinya yang berjudul “Aku” pertama kali dimuat di Pandji Poestaka pada 1942. Ia wafat akibat TBC pada 28 April 1949."],
+      petik_contoh: ["Teks — Contoh penggunaan tanda petik",
+        "a. Istilah asing diberi penjelasan: <i>wisdom</i> ‘kebijaksanaan’.\nb. “Merdeka atau mati!” seru Bung Tomo dalam pidatonya.\nc. Tanya Rina, “Kaudengar bunyi ‘kring-kring’ tadi?”\nd. Sajak “Pahlawanku” terdapat pada halaman 125 buku itu."],
+      italik: ["Teks — Penulisan judul dan nama media",
+        "Dalam tata tulis, judul buku, nama media, judul album, dan judul antologi puisi ditulis dengan huruf miring (italik). Adapun judul bab, judul artikel, judul lagu, dan judul puisi diapit tanda petik ganda."],
+      unfriend1: ["Teks 7 — Cuplikan prolog novel remaja bertema perundungan",
+        "Katrissa terkurung di dalam bilik toilet Eglantine High School. Pintu bilik itu digedor berkali-kali oleh sekelompok siswa yang berteriak mengancam dan memaksanya keluar sambil melontarkan umpatan.\nAnak-anak menyebut tempat itu “pojok derita”, tempat bagi mereka yang tidak diinginkan. Dulu Katrissa yakin hanya pecundang yang akan berakhir di sana, tetapi kini ia sendiri terjebak.\nIa berusaha setegar mungkin dan tidak mau kalah, tetapi pertahanannya mulai runtuh. Dalam hati ia memohon pertolongan Tuhan karena merasa dirinya bisa mati."],
+      unfriend2: ["Teks 8 — Cuplikan Bab 1 “Angsa dan Itik”",
+        "Di tahun keduanya di Eglantine High School, Katrissa Satin turun dari mobil sambil membawa boks cokelat besar berisi perlengkapan presentasi. Ia berharap bertemu Aura agar dibantu, tetapi yang menawarkan bantuan justru Langit Lazuardi, siswa berkacamata tebal dengan poni panjang yang diikat gelang karet. Aura menganggap anak seperti Langit sebagai “itik”, yaitu anak yang tidak populer, sedangkan Katrissa kini diakui sebagai “angsa”.\nKatrissa menerima bantuan Langit dengan terpaksa dan merasa risi saat orang membicarakan mereka. Tak lama, Aura dan Milani datang. Aura bertubuh tinggi dan langsing, berhidung mancung, tampak lembut, tetapi tegas menarik batas pergaulan. Ia menyindir bahwa cowok yang baik harus sadar diri akan posisinya. Milani, sahabat Aura, ikut meremehkan Langit.\nKatrissa mengambil kembali boksnya dan menyuruh Langit pergi agar tidak terlibat masalah. Di kelas, Aura mendesaknya segera punya pacar dan bertanya kepada seisi kelas siapa yang mau menjadi pacar Katrissa. Katrissa merasa malu dan mengalihkan pembicaraan ke presentasi."],
+      perwatakan: ["Teks 9 — Cara mencermati perwatakan tokoh",
+        "Perwatakan tokoh dalam cerita dapat dicermati melalui empat hal: (1) senandika, yaitu pembicaraan tokoh dengan dirinya sendiri; (2) dialog tokoh, yaitu pembicaraan antartokoh; (3) tindakan atau perilaku tokoh ketika menghadapi konflik; dan (4) fisik dan watak tokoh yang digambarkan langsung melalui deskripsi."],
+      mardanu: ["Teks 10 — Ringkasan cerpen “Lelaki yang Menderita bila Dipuji”",
+        "Mardanu, pensiunan tentara berusia tujuh puluh lima tahun, sering dipuji karena uang pensiunnya diterima utuh, badannya masih segar, anak-anaknya mandiri, bahkan burung kutilangnya lincah berkicau. Ia justru menderita karena merasa pujian hanya pantas diberikan kepada orang yang berjasa, sedangkan ia belum pernah berbuat jasa apa pun.\nSejak muda ia terkesan oleh kisah kepahlawanan pamannya yang gugur di medan perang, lalu mendaftar menjadi tentara pada usia sembilan belas tahun. Selama bertugas ia tidak pernah terlibat perang; pertempuran hebat hanya hadir dalam mimpinya. Suatu pagi, sepulang dari kantor pos dan pasar bersama Kosim, tukang becak langganannya, Mardanu mendengar cucunya, Manik, menyanyikan lagu tentang burung kutilang.\nSetelah lama merenung, Mardanu membuka pintu kurungan dan melepas kutilangnya. Ketika Manik mengetahuinya, anak itu memuji kakeknya hebat. Itulah pujian pertama yang tidak membuat Mardanu menderita; ia merasa sangat lega."],
+      quaden: ["Teks 11 — Ringkasan karangan khas tentang Quaden Bayles",
+        "Quaden Bayles (9) menangis histeris di dalam mobil ketika ibunya, Yarraka Bayles, menjemputnya dari sekolah. Dalam video yang diunggah ibunya ke Facebook, Quaden mengungkapkan keinginannya untuk mengakhiri hidup. Yarraka sengaja mengunggah video itu agar para orang tua mengedukasi anak-anak mereka untuk tidak merundung. Menurutnya, anaknya kerap dirundung dan ia sudah menghubungi kepala sekolah.\nQuaden dirundung karena kondisi dwarfisme, yaitu kelainan yang membuat tinggi badan seseorang di bawah rata-rata. Pada 2015, video Quaden berekspresi di depan cermin di sebuah rumah sakit di Brisbane yang diunggah ibunya dibanjiri hinaan. Seorang pengguna menulis bahwa kondisi itu terjadi jika seorang ibu mengonsumsi obat-obatan saat hamil. Yarraka terkejut dan menjelaskan bahwa unggahan itu wujud kebanggaannya atas pencapaian sang anak. Ia berkata, tidak seorang pun ingin mendengar hal buruk tentang anaknya."],
+      adik: ["Teks 12 — Kisah perundungan terhadap seorang adik",
+        "Siang itu, Selasa, 14 Maret 1995, adikku pulang dari sekolah sambil terisak. Aku mengejarnya dengan pertanyaan, “Kamu dikerjai lagi, ya?” Anggukannya menjadi isyarat bahwa ia kembali menjadi korban perundungan.\nAdikku bernama Dimas. Sejak lahir ia menderita rabun jauh dan harus memakai kacamata tebal. Bukan satu dua kali ia diejek “si mata empat”. Mungkin ia sudah kebal dengan ejekan itu.\nSeandainya aku ada di sana saat adikku dihina, ingin rasanya kudatangi para perundung itu satu per satu."]
+    };
+
+    function mk(type, cat, diff, ps, text, extra) {
+      const o = { type: type, category: cat, difficulty: diff, text: text };
+      if (ps) {
+        const p = (typeof ps === 'string') ? PS[ps] : ps;
+        o.passageTitle = p[0];
+        o.passage = p[1];
+      }
+      return Object.assign(o, extra);
+    }
+    const pg = (c, d, p, t, opts, a, e) => mk('pg', c, d, p, t, { options: opts, answer: a, explanation: e });
+    const dd = (c, d, p, t, zones, items, e) => mk('dragdrop', c, d, p, t, {
+      zones: zones,
+      items: items.map((it, i) => ({ id: 'i' + (i + 1), label: it[0], targetZone: it[1] })),
+      explanation: e
+    });
+    const mt = (c, d, p, t, pairs, e) => mk('matching', c, d, p, t, {
+      pairs: pairs.map(x => ({ left: x[0], right: x[1] })),
+      explanation: e
+    });
+
+    const RAW_QUESTIONS = [
+      // ===================== INFOGRAFIS TOKOH SASTRAWAN =====================
+      pg(C1, 'Mudah', 'jassin', "Berdasarkan Teks 1, tempat dan tanggal lahir H.B. Jassin adalah ....",
+        ["Medan, 26 Juli 1922", "Gorontalo, 13 Juli 1917", "Jakarta, 11 Maret 2000", "Balikpapan, 1 Februari 1940", "Gorontalo, 11 Maret 2000"], 1,
+        "Infografik menyebutkan Jassin lahir di Gorontalo pada 13 Juli 1917 dan wafat di Jakarta pada 11 Maret 2000."),
+      pg(C1, 'Mudah', 'jassin', "Menurut Teks 1, siapakah yang memengaruhi minat H.B. Jassin terhadap dokumentasi?",
+        ["Sutan Takdir Alisjahbana", "Chairil Anwar", "Bague Mantu Jassin", "Pamusuk Eneste", "Guru di HBS Medan"], 2,
+        "Infografik menyebutkan bahwa ayahnya, Bague Mantu Jassin, memengaruhi minat Jassin terhadap dokumentasi."),
+      pg(C1, 'Mudah', 'jassin', "Berdasarkan Teks 1, H.B. Jassin mulai bekerja di Balai Pustaka pada tanggal ....",
+        ["13 Juli 1917", "11 Maret 2000", "1 Januari 1932", "1 Februari 1940", "1 Februari 1927"], 3,
+        "Pada 1 Februari 1940 Jassin datang ke Balai Pustaka membawa surat dari Sutan Takdir Alisjahbana dan diterima bekerja."),
+      pg(C1, 'Sedang', 'wiki', "Alasan H.B. Jassin dijuluki Paus Sastra Indonesia menurut Teks 2 adalah ....",
+        ["Ia lahir di Gorontalo dan wafat pada usia 82 tahun", "Kiprahnya di bidang kritik dan dokumentasi sastra", "Ia memimpin lembaga keagamaan di Jakarta", "Gedung dokumentasinya terletak di Taman Ismail Marzuki", "Tulisan-tulisannya menjadi bacaan wajib di sekolah dasar"], 1,
+        "Teks 2 menyatakan bahwa karena kiprahnya di bidang kritik dan dokumentasi sastra, Jassin dijuluki Paus Sastra Indonesia."),
+      pg(C1, 'Mudah', 'artikel', "Menurut Teks 3, siapakah yang mengajak Jassin bekerja sebagai redaktur buku di Balai Pustaka?",
+        ["Pamusuk Eneste", "Chairil Anwar", "Bague Mantu Jassin", "Pemerintah Daerah DKI Jakarta", "Sutan Takdir Alisjahbana"], 4,
+        "Jassin menerima surat dari Sutan Takdir Alisjahbana yang mengajaknya bekerja sebagai redaktur buku di Balai Pustaka."),
+      pg(C1, 'Mudah', 'chairil', "Berdasarkan Teks 4, jenis tulisan Chairil Anwar yang paling banyak dihasilkan pada periode 1942–1949 adalah ....",
+        ["sajak asli", "sajak terjemahan", "prosa asli", "prosa terjemahan", "saduran"], 0,
+        "Dari 94 tulisan, sebanyak 70 (74,46%) adalah sajak asli sehingga jumlahnya paling banyak."),
+      pg(C1, 'Sedang', 'chairil', "Urutan peristiwa yang sesuai dengan Teks 4 adalah ....",
+        ["Puisi “Nisan” dimuat → menikahi Hapsah → menulis puisi “Aku” → wafat",
+         "Menulis puisi “Aku” → puisi “Nisan” dimuat → menikahi Hapsah → wafat",
+         "Puisi “Nisan” dimuat → menulis puisi “Aku” → menikahi Hapsah → wafat",
+         "Puisi “Nisan” dimuat → menulis puisi “Aku” → wafat → menikahi Hapsah",
+         "Menikahi Hapsah → puisi “Nisan” dimuat → menulis puisi “Aku” → wafat"], 2,
+        "Urutan yang benar: 1942 puisi “Nisan” dimuat, 1943 menulis puisi “Aku”, 1946 menikahi Hapsah, 1949 wafat."),
+      pg(C1, 'Sulit', 'validasi', "Bagian informasi pada unggahan yang tidak valid jika dibandingkan dengan data infografik adalah ....",
+        ["Chairil Anwar lahir di Medan pada 26 Juli 1922.", "Puisi “Aku” pertama kali dimuat di Pandji Poestaka pada 1942.", "Chairil Anwar wafat pada 28 April 1949.", "Chairil Anwar wafat akibat TBC.", "Chairil Anwar adalah seorang penyair."], 1,
+        "Menurut infografik, yang dimuat di Pandji Poestaka pada 1942 adalah puisi “Nisan”, sedangkan puisi “Aku” diterbitkan majalah Timur pada 1945. Ini berkaitan dengan kebenaran faktual."),
+
+      // ============================ TANDA PETIK ============================
+      pg(C2, 'Mudah', ['Kalimat langsung', "Tanya Rina, “Kaudengar bunyi ‘kring-kring’ tadi?”"], "Fungsi tanda petik tunggal pada kata ‘kring-kring’ dalam kalimat tersebut adalah mengapit ....",
+        ["judul lagu", "makna kata asing", "petikan yang terdapat dalam petikan lain", "istilah ilmiah yang kurang dikenal", "penjelasan kata atau ungkapan"], 2,
+        "Tanda petik tunggal dipakai untuk mengapit petikan yang terdapat dalam petikan lain."),
+      pg(C2, 'Mudah', ['Kalimat contoh', "Beberapa kata serapan dijelaskan dengan penulisan berikut: <i>noken</i> ‘tas khas Papua’, <i>tadulako</i> ‘panglima’, dan <i>policy</i> ‘kebijakan’."], "Tanda petik tunggal pada ‘tas khas Papua’ dan ‘panglima’ berfungsi mengapit ....",
+        ["makna, terjemahan, atau penjelasan kata", "petikan langsung dari pembicaraan", "judul sajak atau lagu", "petikan dalam petikan lain", "nama media dan judul buku"], 0,
+        "Tanda petik tunggal juga dipakai untuk mengapit makna, terjemahan, atau penjelasan kata atau ungkapan."),
+      pg(C2, 'Mudah', ['Kutipan penulisan pada infografik', "Infografik tentang Chairil Anwar menuliskan judul puisinya dengan tanda petik tunggal, yaitu puisi ‘Nisan’ dan puisi ‘Aku’."], "Penulisan yang tepat berdasarkan PUEBI adalah ....",
+        ["puisi ‘Nisan’ dan puisi ‘Aku’", "puisi <i>Nisan</i> dan puisi <i>Aku</i>", "puisi “Nisan” dan puisi “Aku”", "puisi Nisan dan puisi Aku", "puisi (Nisan) dan puisi (Aku)"], 2,
+        "Judul puisi diapit tanda petik ganda (“...”), bukan tanda petik tunggal."),
+      pg(C2, 'Sedang', 'italik', "Kalimat yang menerapkan penulisan judul buku dan judul puisi secara tepat adalah ....",
+        ["Kumpulan puisi “Aku Ini Binatang Jalang” memuat puisi Aku.",
+         "Kumpulan puisi <i>Aku Ini Binatang Jalang</i> memuat puisi “Aku”.",
+         "Kumpulan puisi <i>Aku Ini Binatang Jalang</i> memuat puisi <i>Aku</i>.",
+         "Kumpulan puisi “Aku Ini Binatang Jalang” memuat puisi “Aku”.",
+         "Kumpulan puisi ‘Aku Ini Binatang Jalang’ memuat puisi ‘Aku’."], 1,
+        "Judul antologi puisi ditulis dengan huruf miring, sedangkan judul puisi diapit tanda petik ganda."),
+      pg(C2, 'Sedang', ['Situasi', "Dina membaca sebuah artikel tentang H.B. Jassin di situs berita daring Tirto.id. Judul artikel itu berbentuk pertanyaan, yaitu Bagaimana H.B. Jassin Merawat Sastra Indonesia?"], "Kalimat yang tepat untuk menuliskan hal tersebut adalah ....",
+        ["Dina membaca artikel <i>Bagaimana H.B. Jassin Merawat Sastra Indonesia?</i> di <i>Tirto.id</i>.",
+         "Dina membaca artikel “Bagaimana H.B. Jassin Merawat Sastra Indonesia?” di “Tirto.id”.",
+         "Dina membaca artikel ‘Bagaimana H.B. Jassin Merawat Sastra Indonesia?’ di Tirto.id.",
+         "Dina membaca artikel “Bagaimana H.B. Jassin Merawat Sastra Indonesia?” di <i>Tirto.id</i>.",
+         "Dina membaca artikel Bagaimana H.B. Jassin Merawat Sastra Indonesia? di <i>Tirto.id</i>."], 3,
+        "Judul artikel diapit tanda petik ganda, sedangkan nama media ditulis dengan huruf miring."),
+      pg(C2, 'Sedang', ['Dua kalimat', "(1) Dilarang memberikan “amplop” kepada petugas!\n(2) “Tetikus” komputer ini sudah tidak berfungsi."], "Tanda petik ganda pada kata “amplop” dan “Tetikus” berfungsi mengapit ....",
+        ["petikan langsung dari pembicaraan", "judul sajak atau lagu", "makna atau terjemahan kata", "nama media dan judul buku", "istilah ilmiah yang kurang dikenal atau kata yang mempunyai arti khusus (konotasi)"], 4,
+        "Tanda petik dipakai untuk mengapit istilah ilmiah yang kurang dikenal atau kata yang mempunyai arti khusus (konotasi)."),
+      pg(C2, 'Sulit', ['Situasi', "Bu Rina bertanya kepada siswanya tentang cerpen “Lelaki yang Menderita bila Dipuji” karya Ahmad Tohari. Pertanyaan itu ditulis sebagai petikan langsung."], "Kalimat yang menggunakan tanda petik tunggal dan ganda secara tepat adalah ....",
+        ["Bu Rina bertanya, “Apakah kalian sudah membaca cerpen ‘Lelaki yang Menderita bila Dipuji’?”",
+         "Bu Rina bertanya, ‘Apakah kalian sudah membaca cerpen “Lelaki yang Menderita bila Dipuji”?’",
+         "Bu Rina bertanya, “Apakah kalian sudah membaca cerpen “Lelaki yang Menderita bila Dipuji”?”",
+         "Bu Rina bertanya, Apakah kalian sudah membaca cerpen “Lelaki yang Menderita bila Dipuji”?",
+         "Bu Rina bertanya, “Apakah kalian sudah membaca cerpen <i>Lelaki yang Menderita bila Dipuji</i>?”"], 0,
+        "Petikan langsung diapit tanda petik ganda, sedangkan judul yang berada di dalam petikan diapit tanda petik tunggal."),
+
+      // ====================== UNSUR INTRINSIK TEKS NARATIF ======================
+      pg(C3, 'Mudah', 'unfriend1', "Latar tempat peristiwa pada Teks 7 adalah ....",
+        ["ruang kelas Eglantine High School", "bilik toilet sekolah", "ruang kepala sekolah", "gerbang sekolah", "kantin sekolah"], 1,
+        "Peristiwa terjadi di dalam bilik toilet Eglantine High School."),
+      pg(C3, 'Mudah', 'unfriend1', "Watak Katrissa yang tergambar pada Teks 7 adalah ....",
+        ["pemberani dan tidak mengenal rasa takut", "sombong dan suka merendahkan orang lain", "pendendam dan suka mengancam", "takut tetapi berusaha tegar dan tidak mau kalah", "pasrah sepenuhnya pada keadaan"], 3,
+        "Katrissa ketakutan, tetapi berusaha setegar mungkin dan tidak mau kalah, meski pertahanannya mulai runtuh."),
+      pg(C3, 'Mudah', 'unfriend1', "Tema yang paling tepat dari cuplikan novel pada Teks 7 adalah ....",
+        ["perundungan di sekolah", "persahabatan dua siswa baru", "percintaan remaja", "kesuksesan meraih prestasi", "petualangan di dalam hutan"], 0,
+        "Cuplikan menggambarkan Katrissa yang dirundung dan diancam di sekolah sehingga temanya perundungan."),
+      pg(C3, 'Sedang', 'unfriend2', "Makna konotasi sebutan “itik” dan “angsa” pada Teks 8 adalah ....",
+        ["itik berarti hewan peliharaan dan angsa hewan liar", "itik berarti anak yang kaya dan angsa anak yang miskin", "itik berarti anak yang tidak populer dan angsa anak yang populer", "itik berarti anak yang nakal dan angsa anak yang rajin", "itik berarti siswa baru dan angsa siswa lama"], 2,
+        "Dalam teks, “itik” melambangkan anak yang tidak populer, sedangkan “angsa” melambangkan anak yang populer dan dianggap keren."),
+      pg(C3, 'Sedang', 'unfriend2', "Watak Aura Amanda yang tergambar pada Teks 8 adalah ....",
+        ["rendah hati dan tidak membeda-bedakan teman", "pemalu dan tertutup", "ramah serta suka membantu siapa pun", "pemarah dan selalu berkelahi", "anggun dan populer, tetapi tegas membatasi pergaulan dan memandang rendah anak yang tidak populer"], 4,
+        "Aura tampak lembut dan anggun, tetapi menarik batas pergaulan dengan tegas dan menyindir Langit."),
+      pg(C3, 'Sedang', 'unfriend1', "Prolog novel menampilkan peristiwa perundungan yang dialami Katrissa saat ini. Bab 1 kemudian menceritakan kejadian sebelum peristiwa itu, lalu cerita bergerak maju dengan sesekali kilas balik. Alur novel tersebut adalah alur ....",
+        ["maju", "campuran", "mundur", "tertutup", "lurus"], 1,
+        "Cerita yang memadukan alur maju dan sorot balik disebut alur campuran."),
+      pg(C3, 'Mudah', 'mardanu', "Tema cerpen pada Teks 10 adalah ....",
+        ["petualangan seorang prajurit di medan perang", "kesetiaan seorang tukang becak", "arti sebuah pujian bagi seseorang", "persahabatan antara kakek dan burung", "keberhasilan mendidik anak"], 2,
+        "Mardanu menderita karena dipuji untuk hal yang menurutnya biasa. Tema cerpen adalah arti sebuah pujian bagi seseorang."),
+      pg(C3, 'Sulit', 'mardanu', "Amanat yang paling tepat dari cerpen pada Teks 10 adalah ....",
+        ["Seseorang harus menjadi pahlawan perang agar layak dipuji.",
+         "Pujian akan bermakna jika lahir dari kebaikan tulus, sekalipun sederhana, bukan dari hal-hal yang biasa saja.",
+         "Burung peliharaan sebaiknya tidak pernah dikurung.",
+         "Pensiunan tentara wajib terus berjuang hingga tua.",
+         "Anak kecil selalu lebih bijaksana daripada orang dewasa."], 1,
+        "Pujian pertama yang membuat Mardanu lega datang setelah ia melakukan kebaikan tulus, yaitu melepas burung. Pesan tersiratnya: nilai pujian terletak pada kebaikan yang tulus."),
+
+      // ================== FAKTA, FIKSI, OPINI, DAN ASUMSI ==================
+      pg(C4, 'Mudah', 'quaden', "Kalimat yang merupakan fakta berdasarkan Teks 11 adalah ....",
+        ["Perundungan adalah perbuatan paling hina di dunia.", "Quaden Bayles berusia 9 tahun dan mengalami dwarfisme.", "Quaden pasti tidak akan mau bersekolah lagi.", "Ibu Quaden sebaiknya tidak mengunggah video itu.", "Semua anak bertubuh pendek pasti dirundung."], 1,
+        "Usia Quaden dan kondisi dwarfisme adalah hal yang benar-benar terjadi dan dapat dibuktikan."),
+      pg(C4, 'Mudah', 'quaden', "Asumsi keliru yang muncul dalam komentar atas unggahan video tahun 2015 pada Teks 11 adalah ....",
+        ["Video itu diunggah dari Brisbane.", "Quaden berekspresi di depan cermin.", "Ibu Quaden bangga atas pencapaian anaknya.", "Kondisi Quaden terjadi karena ibunya mengonsumsi obat-obatan saat hamil.", "Dwarfisme membuat tinggi badan di bawah rata-rata."], 3,
+        "Komentar yang menuduh ibu mengonsumsi obat-obatan saat hamil adalah dugaan yang keliru dan dibantah oleh Yarraka Bayles."),
+      pg(C4, 'Mudah', 'quaden', "Pernyataan yang merupakan opini Yarraka Bayles dalam Teks 11 adalah ....",
+        ["Quaden berusia sembilan tahun.", "Video diunggah ke Facebook.", "Para orang tua perlu mengedukasi anak-anak mereka agar tidak merundung.", "Quaden menderita dwarfisme.", "Yarraka sudah menghubungi kepala sekolah."], 2,
+        "Pendapat bahwa orang tua perlu mengedukasi anak agar tidak merundung adalah opini, yaitu pendapat seseorang terhadap suatu permasalahan."),
+      pg(C4, 'Mudah', 'adik', "Kalimat yang mengandung unsur fiksi (khayalan) pada Teks 12 adalah ....",
+        ["Siang itu, Selasa, 14 Maret 1995, adikku pulang dari sekolah sambil terisak.", "Adikku bernama Dimas dan menderita rabun jauh sejak lahir.", "Seandainya aku ada di sana, ingin rasanya kudatangi para perundung itu satu per satu.", "Bukan satu dua kali ia diejek “si mata empat”.", "Adikku harus memakai kacamata tebal."], 2,
+        "Kalimat berawalan “seandainya” menggambarkan sesuatu yang tidak benar-benar terjadi sehingga termasuk fiksi."),
+      pg(C4, 'Sedang', 'adik', "Kata yang menjadi penanda unsur fiksi dalam Teks 12 adalah ....",
+        ["mungkin dan seandainya", "siang dan sejak lahir", "pulang dan terisak", "kacamata dan rabun", "sekolah dan adik"], 0,
+        "Kata “mungkin” dan “seandainya” menandai dugaan atau khayalan penulis yang tidak benar-benar terjadi."),
+      pg(C4, 'Sulit', 'quaden', "Komentar “Itulah yang terjadi jika Anda mengonsumsi obat-obatan saat hamil” termasuk asumsi karena ....",
+        ["dapat dibuktikan kebenarannya melalui data medis", "merupakan dugaan yang dijadikan dasar untuk menilai dan menyimpulkan, tetapi keliru", "berisi pendapat pribadi penulis tentang perundungan", "hanya berdasarkan khayalan penulis cerita", "disampaikan langsung oleh narasumber utama"], 1,
+        "Asumsi adalah dugaan yang diterima sebagai dasar untuk bertindak atau menilai. Komentar itu berupa dugaan yang keliru dan dibantah ibu Quaden."),
+      pg(C4, 'Sulit', 'quaden', "Pernyataan yang paling tepat tentang unsur fiksi pada Teks 11 adalah ....",
+        ["Teks mengandung fiksi karena ada komentar yang menghina Quaden.", "Teks mengandung fiksi karena Quaden menangis histeris.", "Teks mengandung fiksi karena ada pendapat Yarraka Bayles.", "Teks mengandung fiksi karena ada tokoh bernama Yarraka Bayles.", "Teks tidak mengandung fiksi karena seluruh peristiwa terjadi pada tokoh nyata, sedangkan komentar hinaan termasuk asumsi, bukan khayalan."], 4,
+        "Teks berupa karangan khas nonfiksi yang berisi fakta, opini, dan asumsi. Tidak ada unsur rekaan atau khayalan penulis."),
+
+      // ============================ DRAG & DROP ============================
+      dd(C1, 'Mudah', 'akurasi', "Seret setiap contoh pemeriksaan informasi ke aspek akurasi yang sesuai berdasarkan Teks 5!",
+        ["Ketepatan Penulisan", "Kesahihan Sumber", "Kebenaran Faktual", "Ketepatan Pengutipan Sumber"],
+        [["Nama penyair ditulis Chairil Anwar dengan ejaan yang benar", 0],
+         ["Informasi berasal dari narasumber yang kredibel", 1],
+         ["Tanggal wafat yang ditulis sesuai dengan data, yaitu 28 April 1949", 2],
+         ["Kutipan wawancara dan buku dicantumkan sesuai sumber aslinya", 3]],
+        "Penulisan nama termasuk ketepatan penulisan; narasumber kredibel termasuk kesahihan sumber; tanggal termasuk kebenaran faktual; kutipan termasuk ketepatan pengutipan sumber."),
+      dd(C1, 'Sedang', 'jassin', "Kelompokkan informasi tentang H.B. Jassin berdasarkan Teks 1 ke dalam riwayat pendidikan atau riwayat pekerjaan dan kiprah!",
+        ["Riwayat Pendidikan", "Riwayat Pekerjaan dan Kiprah"],
+        [["Bersekolah di HIS Balikpapan (1927–1929)", 0],
+         ["Bersekolah di HBS Medan (1932–1939)", 0],
+         ["Bekerja di Balai Pustaka sejak 1 Februari 1940", 1],
+         ["Menyimpan dokumen kesusastraan secara sistematis", 1]],
+        "HIS dan HBS adalah riwayat pendidikan. Bekerja di Balai Pustaka dan mendokumentasikan sastra adalah riwayat pekerjaan dan kiprah."),
+      dd(C1, 'Sulit', 'chairil', "Kelompokkan pernyataan berikut menurut kesesuaiannya dengan data pada Teks 4!",
+        ["Sesuai Infografik", "Tidak Sesuai Infografik"],
+        [["Chairil Anwar lahir di Medan pada 26 Juli 1922", 0],
+         ["Puisi “Aku” pertama kali dimuat di Pandji Poestaka", 1],
+         ["Chairil menikahi Hapsah pada 6 September 1946", 0],
+         ["Chairil wafat akibat TBC pada 28 April 1950", 1]],
+        "Yang dimuat di Pandji Poestaka adalah “Nisan”, sedangkan “Aku” diterbitkan majalah Timur. Chairil wafat pada 28 April 1949, bukan 1950."),
+
+      dd(C2, 'Mudah', 'petik_contoh', "Seret setiap fungsi berikut ke jenis tanda petik yang sesuai berdasarkan contoh pada teks!",
+        ["Tanda Petik Tunggal (‘...’)", "Tanda Petik Ganda (“...”)"],
+        [["Mengapit petikan di dalam petikan lain", 0],
+         ["Mengapit petikan langsung dari pembicaraan", 1],
+         ["Mengapit makna atau terjemahan kata asing", 0],
+         ["Mengapit judul sajak, lagu, atau artikel", 1]],
+        "Tanda petik tunggal untuk petikan dalam petikan dan makna/terjemahan kata; tanda petik ganda untuk petikan langsung dan judul sajak, lagu, atau artikel."),
+      dd(C2, 'Sedang', 'italik', "Kelompokkan judul dan nama berikut menurut cara penulisannya berdasarkan teks!",
+        ["Ditulis Miring (Italik)", "Diapit Tanda Petik Ganda"],
+        [["Kompas (nama media)", 0],
+         ["Lelaki yang Menderita bila Dipuji (judul cerpen)", 1],
+         ["Ronggeng Dukuh Paruk (judul novel)", 0],
+         ["Maju Tak Gentar (judul lagu)", 1]],
+        "Nama media dan judul buku ditulis miring; judul cerpen/artikel/bab dan judul lagu diapit tanda petik ganda."),
+
+      dd(C3, 'Mudah', 'unfriend2', "Kelompokkan gambaran tokoh berikut berdasarkan Teks 8 ke dalam gambaran fisik atau gambaran watak!",
+        ["Gambaran Fisik", "Gambaran Watak"],
+        [["Berkacamata tebal dengan poni panjang diikat gelang karet", 0],
+         ["Mau menolong dengan tulus", 1],
+         ["Bertubuh tinggi, langsing, dan berhidung mancung", 0],
+         ["Tegas menarik batas pergaulan", 1]],
+        "Ciri tubuh dan penampilan termasuk gambaran fisik, sedangkan sifat dan sikap termasuk gambaran watak."),
+      dd(C3, 'Sedang', 'perwatakan', "Kelompokkan kutipan berikut berdasarkan cara penggambaran perwatakan pada Teks 9!",
+        ["Senandika", "Dialog Tokoh", "Tindakan Tokoh", "Fisik dan Watak (Deskripsi)"],
+        [["Dalam hati, Katrissa berbisik, “Aku bakal mati.”", 0],
+         ["Aura berkata, “Cowok yang baik juga sadar diri akan posisinya.”", 1],
+         ["Katrissa mengambil boksnya dari Langit agar Langit tidak terlibat masalah.", 2],
+         ["Langit berkacamata tebal dan berponi panjang yang diikat gelang karet.", 3]],
+        "Ucapan dalam hati adalah senandika; ucapan antartokoh adalah dialog; perbuatan adalah tindakan; penggambaran langsung ciri tokoh adalah deskripsi fisik dan watak."),
+      dd(C3, 'Mudah', 'mardanu', "Kelompokkan unsur intrinsik berikut berdasarkan Teks 10!",
+        ["Tokoh", "Latar", "Alur", "Tema"],
+        [["Mardanu, Manik, dan Kosim", 0],
+         ["Alun-alun, kantor pos, dan pasar", 1],
+         ["Mardanu merenung, lalu melepas burung kutilangnya", 2],
+         ["Arti sebuah pujian bagi seseorang", 3]],
+        "Para pelaku adalah tokoh, tempat adalah latar, rangkaian peristiwa adalah alur, dan gagasan pokok adalah tema."),
+
+      dd(C4, 'Sedang', 'quaden', "Kelompokkan pernyataan berikut ke dalam fakta, fiksi, opini, atau asumsi!",
+        ["Fakta", "Fiksi", "Opini", "Asumsi"],
+        [["Yarraka Bayles mengunggah video anaknya ke Facebook.", 0],
+         ["Seandainya aku punya mesin waktu, aku akan mencegah semua perundungan.", 1],
+         ["Sebaiknya sekolah menindak tegas semua pelaku perundungan.", 2],
+         ["Pelaku perundungan pasti berasal dari keluarga yang bermasalah.", 3]],
+        "Fakta benar-benar terjadi; fiksi berdasarkan khayalan; opini adalah pendapat; asumsi adalah dugaan yang dijadikan dasar menyimpulkan."),
+      dd(C4, 'Mudah', 'adik', "Kelompokkan kalimat berikut berdasarkan Teks 12 ke dalam fakta atau fiksi!",
+        ["Fakta", "Fiksi"],
+        [["Adikku pulang dari sekolah sambil terisak pada hari Selasa.", 0],
+         ["Seandainya aku ada di sana, aku akan mendatangi para perundung itu.", 1],
+         ["Adikku sering diejek “si mata empat”.", 0],
+         ["Mungkin ia sudah kebal dengan ejekan itu.", 1]],
+        "Kalimat dengan kata “mungkin” dan “seandainya” menggambarkan dugaan atau khayalan sehingga termasuk fiksi."),
+
+      // ============================ MENJODOHKAN ============================
+      mt(C1, 'Mudah', 'chairil', "Pasangkan tahun atau tanggal dengan peristiwa yang sesuai berdasarkan Teks 4!",
+        [["1942", "Puisi “Nisan” pertama kali dimuat di Pandji Poestaka"],
+         ["1943", "Chairil menulis puisi “Aku”"],
+         ["6 September 1946", "Chairil menikahi Hapsah"],
+         ["28 April 1949", "Chairil wafat akibat TBC"]],
+        "Sesuai urutan kronologis pada infografik Chairil Anwar."),
+      mt(C1, 'Sulit', 'artikel', "Pasangkan tokoh dengan peran atau kiprahnya berdasarkan Teks 3!",
+        [["Sutan Takdir Alisjahbana", "Mengirim surat yang mengajak Jassin bekerja di Balai Pustaka"],
+         ["Pamusuk Eneste", "Mengungkap minat Jassin terhadap dokumentasi sejak usia sekitar sepuluh tahun"],
+         ["Bague Mantu Jassin", "Ayah Jassin yang melarangnya bekerja di Jakarta dan ingin ia menjadi amtenar"],
+         ["Chairil Anwar", "Sahabat yang mengirim kartu pos bertitimangsa 8 Maret 1944 kepada Jassin"]],
+        "Peran tiap tokoh sesuai isi ringkasan artikel pada Teks 3."),
+
+      mt(C2, 'Mudah', 'petik_contoh', "Pasangkan jenis judul atau nama berikut dengan penulisannya yang tepat!",
+        [["Judul novel", "<i>Ronggeng Dukuh Paruk</i>"],
+         ["Judul puisi", "“Nisan”"],
+         ["Nama surat kabar", "<i>Kompas</i>"],
+         ["Judul lagu", "“Maju Tak Gentar”"]],
+        "Judul novel dan nama surat kabar ditulis miring; judul puisi dan judul lagu diapit tanda petik ganda."),
+      mt(C2, 'Mudah', 'petik_contoh', "Pasangkan fungsi tanda petik dengan contoh kalimatnya!",
+        [["Petikan di dalam petikan lain", "“Kita bangga karena lagu ‘Indonesia Raya’ berkumandang,” kata Ketua KONI."],
+         ["Makna atau terjemahan kata", "retina ‘dinding mata sebelah dalam’"],
+         ["Petikan langsung dari pembicaraan", "“Merdeka atau mati!” seru Bung Tomo."],
+         ["Judul sajak", "Sajak “Pahlawanku” terdapat pada halaman 125."]],
+        "Tiap fungsi tanda petik dipasangkan dengan contoh yang sesuai."),
+      mt(C2, 'Sulit', 'italik', "Pasangkan kalimat yang penulisannya keliru dengan perbaikannya!",
+        [["Puisi ‘Nisan’ dimuat di majalah itu.", "Puisi “Nisan” dimuat di majalah itu."],
+         ["Ia membaca novel “Unfriend You” semalam.", "Ia membaca novel <i>Unfriend You</i> semalam."],
+         ["Bu Rina bertanya, “Apakah kau mendengar “kring-kring” tadi?”", "Bu Rina bertanya, “Apakah kau mendengar ‘kring-kring’ tadi?”"],
+         ["Kata tadulako “panglima” sering ditemukan.", "Kata <i>tadulako</i> ‘panglima’ sering ditemukan."]],
+        "Judul puisi memakai tanda petik ganda, judul novel ditulis miring, petikan dalam petikan memakai tanda petik tunggal, dan makna kata memakai tanda petik tunggal."),
+
+      mt(C3, 'Sedang', 'mardanu', "Pasangkan tokoh dengan peran atau wataknya berdasarkan Teks 10!",
+        [["Mardanu", "Pensiunan tentara yang merasa belum pernah berjasa"],
+         ["Manik", "Cucu yang polos dan memuji kakeknya"],
+         ["Kosim", "Tukang becak yang bekerja keras namun penghasilannya tidak menentu"],
+         ["Paman Mardanu", "Pejuang yang gugur dan menginspirasi kepahlawanan Mardanu"]],
+        "Peran tokoh sesuai isi ringkasan cerpen pada Teks 10."),
+      mt(C3, 'Sulit', 'unfriend2', "Pasangkan tokoh dengan wataknya berdasarkan Teks 8!",
+        [["Katrissa", "Berusaha menjaga perasaan Langit, tetapi tidak berani melawan Aura"],
+         ["Langit", "Ramah dan tulus menawarkan bantuan meski dipandang rendah"],
+         ["Aura", "Populer dan anggun, tetapi tegas menarik batas pergaulan"],
+         ["Milani", "Sahabat setia Aura yang ikut meremehkan Langit"]],
+        "Watak tiap tokoh disimpulkan dari tindakan dan dialognya pada Teks 8."),
+
+      mt(C4, 'Mudah', 'quaden', "Perhatikan Teks 11. Pasangkan istilah dengan pengertiannya!",
+        [["Fakta", "Sesuatu yang benar-benar terjadi"],
+         ["Fiksi", "Sesuatu yang tidak benar-benar terjadi dan berdasarkan khayalan atau pikiran"],
+         ["Opini", "Pendapat seseorang terhadap suatu permasalahan"],
+         ["Asumsi", "Dugaan yang diterima sebagai dasar untuk bertindak"]],
+        "Definisi fakta, fiksi, opini, dan asumsi dalam teks naratif."),
+      mt(C4, 'Sedang', 'adik', "Pasangkan kalimat berikut dengan jenis informasinya berdasarkan Teks 12!",
+        [["Adikku sejak lahir menderita rabun jauh.", "Fakta"],
+         ["Seandainya aku ada di sana, aku akan memberi pelajaran kepada perundung.", "Fiksi"],
+         ["Memakai kacamata tebal bukanlah hal yang memalukan.", "Opini"],
+         ["Dimas pasti membenci sekolah karena sering diejek.", "Asumsi"]],
+        "Kalimat pertama fakta, kedua khayalan (fiksi), ketiga pendapat (opini), keempat dugaan (asumsi)."),
+      mt(C4, 'Sulit', 'quaden', "Pasangkan kalimat dengan alasan penggolongannya!",
+        [["Video Quaden diunggah ibunya ke Facebook.", "Fakta, karena benar-benar terjadi dan dapat dibuktikan"],
+         ["Seandainya aku ada di sana, kudatangi rumah para perundung itu.", "Fiksi, karena hanya berdasarkan khayalan penulis"],
+         ["Semua perundung pasti anak yang kurang kasih sayang.", "Asumsi, karena dugaan yang dijadikan dasar menyimpulkan"],
+         ["Perundungan harus dihentikan oleh semua pihak.", "Opini, karena pendapat seseorang terhadap suatu permasalahan"]],
+        "Setiap kalimat digolongkan berdasarkan pengertian fakta, fiksi, asumsi, dan opini.")
+    ];
+
+    const FULL_QUESTION_BANK = ['pg', 'dragdrop', 'matching']
+      .flatMap(tp => RAW_QUESTIONS.filter(q => q.type === tp))
+      .map((q, i) => Object.assign({ id: i + 1 }, q));
+
+    // =========================================================================
+    // 2. APPLICATION STATE & STORAGE KEYS
+    // =========================================================================
+    const STORAGE_KEY_URL = 'asas_indo_gas_url';
+    // Verifikasi password guru memakai hash SHA-256 (password tidak tersimpan sebagai teks biasa)
+    const TEACHER_PASS_HASH = '6355e75fddbda3d8ea08ac2a48b3fe9eb7b92591218826926f5d70f84eca7194';
+    function sha256Hex(s) {
+      const rr = (v, a) => (v >>> a) | (v << (32 - a));
+      const K = [], H = [];
+      let pc = 0, cand = 2;
+      const isP = n => { for (let i = 2; i * i <= n; i++) if (n % i === 0) return false; return true; };
+      while (pc < 64) { if (isP(cand)) { if (pc < 8) H[pc] = (Math.pow(cand, .5) * 4294967296) | 0; K[pc++] = (Math.pow(cand, 1 / 3) * 4294967296) | 0; } cand++; }
+      const bytes = Array.from(unescape(encodeURIComponent(s))).map(c => c.charCodeAt(0));
+      const bl = bytes.length * 8; bytes.push(0x80);
+      while (bytes.length % 64 !== 56) bytes.push(0);
+      for (let i = 7; i >= 0; i--) bytes.push(i > 3 ? 0 : (bl >>> (i * 8)) & 255);
+      for (let o = 0; o < bytes.length; o += 64) {
+        const w = [];
+        for (let i = 0; i < 16; i++) w[i] = (bytes[o+4*i] << 24) | (bytes[o+4*i+1] << 16) | (bytes[o+4*i+2] << 8) | bytes[o+4*i+3];
+        for (let i = 16; i < 64; i++) { const s0 = rr(w[i-15],7)^rr(w[i-15],18)^(w[i-15]>>>3), s1 = rr(w[i-2],17)^rr(w[i-2],19)^(w[i-2]>>>10); w[i] = (w[i-16]+s0+w[i-7]+s1) | 0; }
+        let [a,b,c,d,e,f,g,hh] = H;
+        for (let i = 0; i < 64; i++) {
+          const t1 = (hh + (rr(e,6)^rr(e,11)^rr(e,25)) + ((e&f)^(~e&g)) + K[i] + w[i]) | 0;
+          const t2 = ((rr(a,2)^rr(a,13)^rr(a,22)) + ((a&b)^(a&c)^(b&c))) | 0;
+          hh=g; g=f; f=e; e=(d+t1)|0; d=c; c=b; b=a; a=(t1+t2)|0;
+        }
+        H[0]=(H[0]+a)|0;H[1]=(H[1]+b)|0;H[2]=(H[2]+c)|0;H[3]=(H[3]+d)|0;H[4]=(H[4]+e)|0;H[5]=(H[5]+f)|0;H[6]=(H[6]+g)|0;H[7]=(H[7]+hh)|0;
+      }
+      return H.map(x => ('00000000' + (x >>> 0).toString(16)).slice(-8)).join('');
+    }
+    function isTeacherPassValid(p) { return sha256Hex(String(p)) === TEACHER_PASS_HASH; }
+
+    const STORAGE_KEY_LOCAL_RECAP = 'asas_indo_local_recap';
+    const STORAGE_KEY_LIVE_SESSIONS = 'asas_indo_live_sessions';
+    // TEMPELKAN URL WEB APP GOOGLE APPS SCRIPT (/exec) ANDA DI BAWAH INI:
+    const DEFAULT_GAS_URL = '';
+
+    let state = {
+      gasUrl: localStorage.getItem(STORAGE_KEY_URL) || DEFAULT_GAS_URL,
+      sessionId: 'SES-' + Math.random().toString(36).substring(2, 8).toUpperCase(),
+      student: { nama: '', kelas: '', absen: '' },
+      activeQuestions: [],
+      examActive: false,
+      terminatedByCheat: false,
+      examSubmitted: false,
+      currentIndex: 0,
+      answers: [],
+      selectedChipId: null,
+      selectedLeftIdx: null,
+      violations: 0,
+      lastViolationTs: 0,
+      teacherModeEnabled: false,
+      teacherUnlocked: false,
+      teacherPass: '',
+      teacherSubTab: 'rekap',
+      recapSourceMode: 'auto',
+      recapRows: [],
+      liveSessionsMap: {}
+    };
+
+    const liveChannel = ('BroadcastChannel' in window) ? new BroadcastChannel('aasas_indo_live_proctor') : null;
+
+    // =========================================================================
+    // 2B. ALGORITMA TOTP DINAMIS 6 DIGIT (INTERVAL 60 DETIK + SINKRONISASI UTC)
+    // =========================================================================
+    const TOTP_SECRET_KEY = "SMAN1SUKARAJA-BAHASAINDONESIA-XII-2026-2027";
+    const TOTP_INTERVAL_SEC = 60;
+    let utcOffsetMs = 0;
+    let utcSynced = false;
+    let tokenTickerInterval = null;
+
+    async function syncServerUtcTime() {
+      const candidateUrls = [];
+      if (state.gasUrl) candidateUrls.push(state.gasUrl);
+      candidateUrls.push(window.location.href);
+
+      for (const u of candidateUrls) {
+        try {
+          const t0 = Date.now();
+          const res = await fetch(u, { method: 'HEAD', cache: 'no-store' });
+          const t1 = Date.now();
+          const dateHeader = res.headers.get('Date');
+          if (dateHeader) {
+            const serverMs = new Date(dateHeader).getTime();
+            if (!isNaN(serverMs)) {
+              const rttHalf = Math.round((t1 - t0) / 2);
+              utcOffsetMs = (serverMs + rttHalf) - t1;
+              utcSynced = true;
+              updateUtcStatusBadges();
+              return;
+            }
+          }
+        } catch (e) {}
+      }
+
+      try {
+        const t0 = Date.now();
+        const res = await fetch('https://worldtimeapi.org/api/timezone/Etc/UTC', { cache: 'no-store' });
+        const t1 = Date.now();
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.unixtime) {
+            const serverMs = data.unixtime * 1000;
+            utcOffsetMs = (serverMs + Math.round((t1 - t0) / 2)) - t1;
+            utcSynced = true;
+            updateUtcStatusBadges();
+            return;
+          }
+        }
+      } catch (e) {}
+      updateUtcStatusBadges();
+    }
+
+    function getSynchronizedUtcNowMs() {
+      return Date.now() + utcOffsetMs;
+    }
+
+    function updateUtcStatusBadges() {
+      const stBadge = document.getElementById('studentUtcBadge');
+      const tcSync = document.getElementById('teacherSyncStatus');
+      if (stBadge) {
+        stBadge.textContent = utcSynced ? "✓ UTC Server Sync" : "UTC Time Sync";
+        stBadge.className = utcSynced
+          ? "text-[11px] font-mono font-bold px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700"
+          : "text-[11px] font-mono font-bold px-2 py-0.5 rounded-md bg-white border border-stone-200 text-slate-600";
+      }
+      if (tcSync) {
+        tcSync.textContent = utcSynced ? "Sinkronisasi Waktu: UTC Server (Akurat)" : "Sinkronisasi Waktu: UTC Perangkat";
+      }
+    }
+
+    async function computeTotpCodeForCounter(counter) {
+      const enc = new TextEncoder();
+      const keyData = enc.encode(TOTP_SECRET_KEY);
+      const counterBuf = new ArrayBuffer(8);
+      const view = new DataView(counterBuf);
+      view.setUint32(0, Math.floor(counter / 0x100000000), false);
+      view.setUint32(4, counter >>> 0, false);
+
+      if (window.crypto && window.crypto.subtle) {
+        const cryptoKey = await window.crypto.subtle.importKey(
+          'raw',
+          keyData,
+          { name: 'HMAC', hash: { name: 'SHA-1' } },
+          false,
+          ['sign']
+        );
+        const sig = await window.crypto.subtle.sign('HMAC', cryptoKey, counterBuf);
+        const hmac = new Uint8Array(sig);
+        const offset = hmac[hmac.length - 1] & 0x0f;
+        const binary =
+          ((hmac[offset] & 0x7f) << 24) |
+          ((hmac[offset + 1] & 0xff) << 16) |
+          ((hmac[offset + 2] & 0xff) << 8) |
+          (hmac[offset + 3] & 0xff);
+        return String(binary % 1000000).padStart(6, '0');
+      }
+
+      let h1 = 0x811c9dc5;
+      const seedStr = `${TOTP_SECRET_KEY}:${counter}`;
+      for (let i = 0; i < seedStr.length; i++) {
+        h1 ^= seedStr.charCodeAt(i);
+        h1 = Math.imul(h1, 0x01000193);
+      }
+      return String(Math.abs(h1) % 1000000).padStart(6, '0');
+    }
+
+    async function getCurrentTotpToken() {
+      const nowSec = Math.floor(getSynchronizedUtcNowMs() / 1000);
+      const counter = Math.floor(nowSec / TOTP_INTERVAL_SEC);
+      return await computeTotpCodeForCounter(counter);
+    }
+
+    async function validateStudentToken(inputCode) {
+      const clean = String(inputCode || '').trim();
+      if (!/^[0-9]{6}$/.test(clean)) return false;
+
+      const nowMs = getSynchronizedUtcNowMs();
+      const nowSec = Math.floor(nowMs / 1000);
+      const currentCounter = Math.floor(nowSec / TOTP_INTERVAL_SEC);
+      const elapsedInWindow = nowSec % TOTP_INTERVAL_SEC;
+
+      const currentToken = await computeTotpCodeForCounter(currentCounter);
+      if (clean === currentToken) return true;
+
+      if (elapsedInWindow <= 10) {
+        const prevToken = await computeTotpCodeForCounter(currentCounter - 1);
+        if (clean === prevToken) return true;
+      }
+      return false;
+    }
+
+    async function refreshTokenDisplays() {
+      const nowMs = getSynchronizedUtcNowMs();
+      const nowSec = Math.floor(nowMs / 1000);
+      const elapsed = nowSec % TOTP_INTERVAL_SEC;
+      const remaining = TOTP_INTERVAL_SEC - elapsed;
+      const pct = Math.max(0, Math.min(100, (remaining / TOTP_INTERVAL_SEC) * 100));
+
+      const token = await getCurrentTotpToken();
+      const formattedToken = `${token.slice(0, 3)} ${token.slice(3)}`;
+
+      const dispEl = document.getElementById('teacherTokenDisplay');
+      const badgeEl = document.getElementById('tokenCountdownBadge');
+      const textEl = document.getElementById('tokenCountdownText');
+      const barEl = document.getElementById('tokenProgressBar');
+      const clockEl = document.getElementById('teacherUtcClock');
+
+      if (dispEl) {
+        dispEl.textContent = formattedToken;
+        dispEl.dataset.rawToken = token;
+      }
+      if (badgeEl) {
+        badgeEl.textContent = `${remaining}d`;
+        badgeEl.className = remaining <= 10
+          ? "px-2.5 py-0.5 rounded-lg bg-rose-500 text-white font-mono font-extrabold text-xs animate-pulse"
+          : "px-2.5 py-0.5 rounded-lg bg-amber-400 text-slate-950 font-mono font-extrabold text-xs";
+      }
+      if (textEl) textEl.textContent = `${remaining} detik lagi`;
+      if (barEl) {
+        barEl.style.width = `${pct}%`;
+        barEl.className = remaining <= 10
+          ? "h-full bg-rose-400 transition-all duration-300 rounded-full"
+          : "h-full bg-amber-400 transition-all duration-300 rounded-full";
+      }
+      if (clockEl) {
+        const d = new Date(nowMs);
+        clockEl.textContent = `UTC: ${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}:${String(d.getUTCSeconds()).padStart(2, '0')}`;
+      }
+    }
+
+    function startTokenTicker() {
+      if (tokenTickerInterval) clearInterval(tokenTickerInterval);
+      refreshTokenDisplays();
+      tokenTickerInterval = setInterval(refreshTokenDisplays, 500);
+    }
+
+    window.copyCurrentToken = async function() {
+      const token = await getCurrentTotpToken();
+      try {
+        await navigator.clipboard.writeText(token);
+        showToast(`Token ${token} berhasil disalin! Siap ditempel ke grup kelas.`, "success");
+      } catch (e) {
+        const tmp = document.createElement('input');
+        tmp.value = token;
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand('copy');
+        document.body.removeChild(tmp);
+        showToast(`Token ${token} berhasil disalin!`, "success");
+      }
+    };
+
+    // =========================================================================
+    // 3. INITIALIZATION & ACCESS MODE CONTROLLER (?mode=guru OR PASSWORD UNLOCK)
+    // =========================================================================
+    function applyAccessVisibility() {
+      const allowed = isTeacherAccessAllowed();
+      const btnSplashTeacher = document.getElementById('btnSplashTeacher');
+      const navTeacherBtn = document.getElementById('navTeacher');
+      const setupGearBtn = document.getElementById('btnNavSetupGear');
+      const btnResultTeacher = document.getElementById('btnResultTeacher');
+      const btnProctorLock = document.getElementById('btnNavProctorLock');
+      const btnSplashModeToggle = document.getElementById('btnTogglePreviewModeSplash');
+
+      if (allowed) {
+        if (btnSplashTeacher) btnSplashTeacher.classList.remove('hidden');
+        if (navTeacherBtn) navTeacherBtn.classList.remove('hidden');
+        if (setupGearBtn) setupGearBtn.classList.remove('hidden');
+        if (btnResultTeacher) btnResultTeacher.classList.remove('hidden');
+        if (btnProctorLock) btnProctorLock.classList.add('hidden');
+        if (btnSplashModeToggle) btnSplashModeToggle.textContent = "✓ Mode Guru & Proktor Aktif";
+      } else {
+        if (btnSplashTeacher) btnSplashTeacher.classList.add('hidden');
+        if (navTeacherBtn) navTeacherBtn.classList.add('hidden');
+        if (setupGearBtn) setupGearBtn.classList.add('hidden');
+        if (btnResultTeacher) btnResultTeacher.classList.add('hidden');
+        if (btnProctorLock) btnProctorLock.classList.remove('hidden');
+        if (btnSplashModeToggle) btnSplashModeToggle.textContent = "🔐 Mode Proktor / Guru";
+      }
+    }
+
+    window.requestTeacherModeUnlock = function() {
+      if (state.examActive) {
+        showToast("Tidak dapat membuka Mode Guru saat ujian sedang berlangsung!", "error");
+        return;
+      }
+      document.getElementById('modeModalError').classList.add('hidden');
+      document.getElementById('modeModalPassInput').value = '';
+      document.getElementById('teacherModeModal').classList.remove('hidden');
+      setTimeout(() => document.getElementById('modeModalPassInput').focus(), 100);
+    };
+
+    window.closeTeacherModeModal = function() {
+      document.getElementById('teacherModeModal').classList.add('hidden');
+    };
+
+    window.confirmTeacherModeModal = function() {
+      const pass = document.getElementById('modeModalPassInput').value.trim();
+      const errEl = document.getElementById('modeModalError');
+      if (!isTeacherPassValid(pass)) {
+        errEl.textContent = "❌ Password guru salah!";
+        errEl.classList.remove('hidden');
+        return;
+      }
+      state.teacherModeEnabled = true;
+      state.teacherUnlocked = true;
+      state.teacherPass = pass;
+      closeTeacherModeModal();
+      applyAccessVisibility();
+      enterApplication('teacher');
+      showToast("Mode Guru & Proktor diaktifkan!", "success");
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('mode') === 'guru') {
+        state.teacherModeEnabled = true;
+      }
+
+      applyAccessVisibility();
+      updateConnectionIndicator();
+      syncServerUtcTime();
+      startTokenTicker();
+
+      setInterval(() => {
+        if (state.examActive) emitStudentHeartbeat('UJIAN');
+        if (state.teacherUnlocked && state.teacherSubTab === 'monitor') pollLiveMonitorSources();
+      }, 3000);
+
+      setInterval(() => {
+        if (!state.teacherUnlocked || state.teacherSubTab !== 'rekap') return;
+        const useSheets = (state.recapSourceMode === 'sheets') || (state.recapSourceMode === 'auto' && Boolean(state.gasUrl));
+        if (useSheets) return;
+        try {
+          const fresh = JSON.parse(localStorage.getItem(STORAGE_KEY_LOCAL_RECAP) || '[]');
+          if (JSON.stringify(fresh) !== JSON.stringify(state.recapRows)) {
+            state.recapRows = fresh;
+            updateStatsAndTable();
+          }
+        } catch (e) {}
+      }, 4000);
+    });
+
+    function updateConnectionIndicator() {
+      const dot = document.getElementById('connectionDot');
+      const badge = document.getElementById('dataSourceBadge');
+      const gateHint = document.getElementById('gateConnectionHint');
+      const syncLocalBtn = document.getElementById('btnSyncLocalToSheet');
+      const localList = JSON.parse(localStorage.getItem(STORAGE_KEY_LOCAL_RECAP) || '[]');
+      const localBadge = document.getElementById('localCountBadge');
+      if (localBadge) localBadge.textContent = localList.length;
+
+      if (state.gasUrl) {
+        if (dot) dot.className = "absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-sunda-dark";
+        if (gateHint) gateHint.textContent = "Status: Terhubung ke Google Sheets";
+        if (syncLocalBtn && localList.length > 0) syncLocalBtn.classList.remove('hidden');
+        if (badge) {
+          if (state.recapSourceMode === 'local') {
+            badge.textContent = "Sumber: Rekaman Lokal Browser";
+            badge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800";
+          } else {
+            badge.textContent = "Sumber: Google Sheets (Rekap SAS)";
+            badge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800";
+          }
+        }
+      } else {
+        if (dot) dot.className = "absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-amber-400 border border-sunda-dark";
+        if (gateHint) gateHint.textContent = "Status: Penyimpanan Lokal Browser";
+        if (syncLocalBtn) syncLocalBtn.classList.add('hidden');
+        if (badge) {
+          badge.textContent = "Sumber: Rekaman Lokal Browser";
+          badge.className = "px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800";
+        }
+      }
+    }
+
+    // =========================================================================
+    // 4. VIEW NAVIGATION
+    // =========================================================================
+    function isTeacherAccessAllowed() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('mode') === 'guru' || state.teacherModeEnabled === true;
+    }
+
+    function switchView(target) {
+      if (target === 'teacher' && !isTeacherAccessAllowed()) {
+        showToast("Akses Portal Guru hanya dapat dibuka oleh Guru.", "error");
+        return;
+      }
+      if (state.examActive && target === 'teacher') {
+        showToast("Tidak dapat membuka Portal Guru saat ujian sedang berlangsung!", "error");
+        return;
+      }
+
+      document.getElementById('viewLobby').classList.add('hidden');
+      document.getElementById('viewExam').classList.add('hidden');
+      document.getElementById('viewResult').classList.add('hidden');
+      document.getElementById('viewTeacher').classList.add('hidden');
+
+      const navStudent = document.getElementById('navStudent');
+      const navTeacher = document.getElementById('navTeacher');
+
+      if (target === 'student') {
+        navStudent.className = "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-sunda-primary shadow-sm cursor-pointer";
+        navTeacher.className = `${isTeacherAccessAllowed() ? '' : 'hidden '}px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-emerald-100 hover:text-white cursor-pointer`;
+        if (state.examActive) {
+          document.getElementById('viewExam').classList.remove('hidden');
+        } else {
+          document.getElementById('viewLobby').classList.remove('hidden');
+        }
+      } else if (target === 'teacher') {
+        navTeacher.className = "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-sunda-primary shadow-sm cursor-pointer";
+        navStudent.className = "px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-emerald-100 hover:text-white cursor-pointer";
+        document.getElementById('viewTeacher').classList.remove('hidden');
+        if (state.teacherUnlocked) {
+          document.getElementById('teacherLoginGate').classList.add('hidden');
+          document.getElementById('teacherDashboard').classList.remove('hidden');
+          refreshTokenDisplays();
+          loadRecapData();
+          pollLiveMonitorSources();
+        } else {
+          document.getElementById('teacherLoginGate').classList.remove('hidden');
+          document.getElementById('teacherDashboard').classList.add('hidden');
+        }
+      }
+    }
+
+    function resetToHome() {
+      state.examActive = false;
+      state.terminatedByCheat = false;
+      state.examSubmitted = false;
+      document.getElementById('inputNama').value = '';
+      document.getElementById('inputKelas').value = '';
+      document.getElementById('inputAbsen').value = '';
+      const tokInp = document.getElementById('inputToken');
+      if (tokInp) tokInp.value = '';
+      document.getElementById('loginErrorBox').classList.add('hidden');
+      switchView('student');
+    }
+
+    // =========================================================================
+    // 5. START EXAM & QUESTION SET BUILDER (60 SOAL)
+    // =========================================================================
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function prepareQuestionInstance(q) {
+      const clone = JSON.parse(JSON.stringify(q));
+      if (clone.type === 'dragdrop') {
+        clone.shuffledItems = shuffleArray(clone.items);
+      } else if (clone.type === 'matching') {
+        const rights = clone.pairs.map((p, idx) => ({ origIdx: idx, text: p.right }));
+        clone.shuffledRights = shuffleArray(rights);
+      }
+      return clone;
+    }
+
+    function buildQuestionSet() {
+      return FULL_QUESTION_BANK.map(q => prepareQuestionInstance(q));
+    }
+
+    window.startExam = async function() {
+      try {
+        const namaInput = document.getElementById('inputNama');
+        const kelasInput = document.getElementById('inputKelas');
+        const absenInput = document.getElementById('inputAbsen');
+        const tokenInput = document.getElementById('inputToken');
+        const errBox = document.getElementById('loginErrorBox');
+
+        const nama = namaInput.value.trim();
+        const kelas = kelasInput.value.trim();
+        const absen = absenInput.value.trim();
+        const tokenVal = tokenInput ? tokenInput.value.trim() : '';
+
+        if (!nama) {
+          errBox.textContent = "⚠️ Mohon isi Nama Lengkap Anda terlebih dahulu sebelum memulai ujian.";
+          errBox.classList.remove('hidden');
+          namaInput.focus();
+          return;
+        }
+        if (!kelas) {
+          errBox.textContent = "⚠️ Mohon pilih Kelas Anda pada daftar 12 kelas XII.";
+          errBox.classList.remove('hidden');
+          kelasInput.focus();
+          return;
+        }
+        if (!absen) {
+          errBox.textContent = "⚠️ Mohon isi Nomor Absen Anda (contoh: 14).";
+          errBox.classList.remove('hidden');
+          absenInput.focus();
+          return;
+        }
+        if (!tokenVal || tokenVal.length !== 6) {
+          errBox.textContent = "🔐 Mohon masukkan 6 digit Token Ujian dari Guru / Proktor!";
+          errBox.classList.remove('hidden');
+          if (tokenInput) tokenInput.focus();
+          return;
+        }
+        const isTokenValid = await validateStudentToken(tokenVal);
+        if (!isTokenValid) {
+          errBox.textContent = "❌ Kode token 6 digit salah atau sudah kedaluwarsa (berubah setiap 60 detik). Silakan periksa kembali token terbaru!";
+          errBox.classList.remove('hidden');
+          if (tokenInput) {
+            tokenInput.select();
+            tokenInput.focus();
+          }
+          return;
+        }
+
+        errBox.classList.add('hidden');
+
+        state.sessionId = 'SES-' + Date.now().toString(36).toUpperCase();
+        state.student = { nama, kelas, absen };
+        state.activeQuestions = buildQuestionSet();
+        state.examActive = true;
+        state.terminatedByCheat = false;
+        state.examSubmitted = false;
+        state.currentIndex = 0;
+        state.answers = state.activeQuestions.map(q => (q.type === 'pg' ? null : {}));
+        state.selectedChipId = null;
+        state.selectedLeftIdx = null;
+        state.violations = 0;
+        state.lastViolationTs = Date.now();
+
+        const initials = nama.split(' ').filter(Boolean).map(w => w[0]).join('').substring(0, 2).toUpperCase();
+        document.getElementById('examAvatar').textContent = initials || 'S';
+        document.getElementById('examStudentName').textContent = nama;
+        document.getElementById('examStudentMeta').textContent = `Kelas ${kelas} • Absen ${absen} • ${state.activeQuestions.length} Soal Ujian`;
+        updateAntiCheatUI();
+
+        document.getElementById('viewLobby').classList.add('hidden');
+        document.getElementById('viewResult').classList.add('hidden');
+        document.getElementById('viewTeacher').classList.add('hidden');
+        document.getElementById('viewExam').classList.remove('hidden');
+
+        renderQuestion();
+        renderQuestionGrid();
+        emitStudentHeartbeat('UJIAN');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error("Error starting exam:", err);
+        showToast("Terjadi gangguan teknis: " + err.message, "error");
+      }
+    };
+
+    // =========================================================================
+    // 5B. LIVE HEARTBEAT EMITTER (UNTUK LIVE MONITOR PROKTOR)
+    // =========================================================================
+    function emitStudentHeartbeat(phase = 'UJIAN', finalScore = null) {
+      if (!state.student.nama) return;
+      let answered = 0;
+      state.activeQuestions.forEach((_, idx) => {
+        if (isQuestionAnswered(idx)) answered++;
+      });
+
+      const payload = {
+        sessionId: state.sessionId,
+        nama: state.student.nama,
+        kelas: state.student.kelas,
+        absen: state.student.absen,
+        currentNo: state.currentIndex + 1,
+        answered: answered,
+        totalQ: state.activeQuestions.length || 50,
+        violations: state.violations,
+        terminatedByCheat: state.terminatedByCheat,
+        phase: phase,
+        finalScore: finalScore,
+        updatedAt: Date.now()
+      };
+
+      try {
+        const liveObj = JSON.parse(localStorage.getItem(STORAGE_KEY_LIVE_SESSIONS) || '{}');
+        liveObj[state.sessionId] = payload;
+        localStorage.setItem(STORAGE_KEY_LIVE_SESSIONS, JSON.stringify(liveObj));
+      } catch (e) {}
+
+      if (liveChannel) {
+        try {
+          liveChannel.postMessage({ type: 'HEARTBEAT', payload });
+        } catch (e) {}
+      }
+    }
+
+    if (liveChannel) {
+      liveChannel.onmessage = (ev) => {
+        if (ev.data && ev.data.type === 'REVIEW_APPROVAL') { refreshReviewButton(); return; }
+        if (ev.data && ev.data.type === 'HEARTBEAT' && ev.data.payload) {
+          state.liveSessionsMap[ev.data.payload.sessionId] = ev.data.payload;
+          if (state.teacherUnlocked) renderLiveMonitor();
+        }
+      };
+    }
+
+    // =========================================================================
+    // 6. ANTI-CHEAT DETECTOR (1x, 2x & 3x AUTO-LOCKOUT + AUTO-RECORD SCORE)
+    // =========================================================================
+    function handlePotentialCheat() {
+      if (!state.examActive || state.terminatedByCheat) return;
+      const now = Date.now();
+      if (now - state.lastViolationTs < 1500) return;
+      state.lastViolationTs = now;
+      registerViolation();
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && state.examActive) {
+        handlePotentialCheat();
+      }
+    });
+
+    window.addEventListener('blur', () => {
+      if (state.examActive) {
+        handlePotentialCheat();
+      }
+    });
+
+    function registerViolation() {
+      if (!state.examActive || state.terminatedByCheat) return;
+      state.violations++;
+      updateAntiCheatUI();
+      const modalTitle = document.getElementById('cheatModalTitle');
+      const modalText = document.getElementById('cheatModalText');
+      const modalBtn = document.getElementById('btnCloseCheatModal');
+
+      if (state.violations === 1) {
+        emitStudentHeartbeat('UJIAN');
+        modalTitle.textContent = "Peringatan Pengawasan! (1 / 3)";
+        modalText.innerHTML = `Anda terdeteksi keluar dari layar ujian (<strong>Pelanggaran ke-1 dari 3</strong>).<br>Jika sekali lagi berpindah tab (2x), status Anda akan dicatat sebagai <strong>"Terindikasi Curang"</strong>, dan jika mencapai <strong>3 kali</strong> ujian akan otomatis dihentikan.`;
+        modalBtn.textContent = "Mengerti, Lanjutkan Ujian";
+        document.getElementById('cheatModal').classList.remove('hidden');
+      } else if (state.violations === 2) {
+        emitStudentHeartbeat('UJIAN');
+        modalTitle.textContent = "Peringatan Keras! (2 / 3)";
+        modalText.innerHTML = `Anda sudah berpindah tab <strong>2 kali</strong>.<br>Status Anda sekarang otomatis tercatat: <strong class="text-rose-700">"Terindikasi Curang"</strong>.<br><span class="text-xs font-bold text-rose-600 block mt-1.5">⚠️ PERHATIAN TERAKHIR: Sekali lagi (ke-3x) berpindah tab/layar, ujian akan LANGSUNG DIHENTIKAN, tidak bisa melanjutkan soal selanjutnya, serta nilai langsung terekam!</span>`;
+        modalBtn.textContent = "Mengerti, Tidak Akan Pindah Tab Lagi";
+        document.getElementById('cheatModal').classList.remove('hidden');
+      } else if (state.violations >= 3) {
+        state.examActive = false;
+        state.terminatedByCheat = true;
+        closeSubmitModal();
+        submitExam({ terminatedByCheat: true });
+
+        modalTitle.textContent = "⛔ Tidak Bisa Melanjutkan Ujian (3x Curang)";
+        modalText.innerHTML = `Anda <strong>tidak bisa melanjutkan ke soal selanjutnya</strong> karena sudah teridentifikasi melakukan kecurangan <strong>3 kali</strong> (3x pindah tab / keluar dari layar ujian).<br><br>Nilai akhir dari jawaban yang telah Anda isi <strong>telah otomatis direkam</strong> ke sistem.`;
+        modalBtn.textContent = "Lihat Hasil & Rekaman Nilai";
+        document.getElementById('cheatModal').classList.remove('hidden');
+      }
+    }
+
+    function closeCheatModal() {
+      document.getElementById('cheatModal').classList.add('hidden');
+      if (state.terminatedByCheat || state.violations >= 3) {
+        document.getElementById('viewExam').classList.add('hidden');
+        document.getElementById('viewResult').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    function updateAntiCheatUI() {
+      const badge = document.getElementById('antiCheatBadge');
+      const text = document.getElementById('antiCheatText');
+      if (state.violations === 0) {
+        badge.className = "px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-emerald-50 text-emerald-700 border border-emerald-200";
+        text.textContent = "Status: Aman (0/3)";
+      } else if (state.violations === 1) {
+        badge.className = "px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-amber-50 text-amber-800 border border-amber-300";
+        text.textContent = "Peringatan (1/3 Pindah Tab)";
+      } else if (state.violations === 2) {
+        badge.className = "px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-rose-100 text-rose-800 border border-rose-300";
+        text.textContent = "Terindikasi Curang (2/3)";
+      } else {
+        badge.className = "px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-rose-700 text-white border border-rose-800";
+        text.textContent = "Dihentikan Otomatis (3/3 Curang)";
+      }
+    }
+
+    // =========================================================================
+    // 7. RENDERING QUESTIONS (PG, DRAG & DROP, MENJODOHKAN) & NAVIGATION
+    // =========================================================================
+    function isQuestionAnswered(idx) {
+      const q = state.activeQuestions[idx];
+      const ans = state.answers[idx];
+      if (!q || ans === null || ans === undefined) return false;
+      if (q.type === 'pg') {
+        return ans !== null;
+      } else if (q.type === 'dragdrop') {
+        return Object.keys(ans).length === q.items.length;
+      } else if (q.type === 'matching') {
+        return Object.keys(ans).length === q.pairs.length;
+      }
+      return false;
+    }
+
+    function renderQuestion() {
+      const total = state.activeQuestions.length;
+      const q = state.activeQuestions[state.currentIndex];
+      document.getElementById('qNumberBadge').textContent = `Soal No. ${state.currentIndex + 1} / ${total}`;
+      document.getElementById('qCategoryBadge').textContent = `Materi: ${q.category}`;
+
+      const typeLabelMap = {
+        pg: 'Pilihan Ganda',
+        dragdrop: 'Drag & Drop (Seret / Klik-Tempel)',
+        matching: 'Menjodohkan'
+      };
+      document.getElementById('qTypeBadge').textContent = typeLabelMap[q.type] || 'Soal';
+
+      const diffBadge = document.getElementById('qDiffBadge');
+      diffBadge.textContent = q.difficulty;
+      if (q.difficulty === 'Mudah') {
+        diffBadge.className = "px-2.5 py-1 rounded-lg font-bold text-xs bg-emerald-100 text-emerald-800";
+      } else if (q.difficulty === 'Sedang') {
+        diffBadge.className = "px-2.5 py-1 rounded-lg font-bold text-xs bg-sky-100 text-sky-800";
+      } else {
+        diffBadge.className = "px-2.5 py-1 rounded-lg font-bold text-xs bg-rose-100 text-rose-800";
+      }
+
+      const passageBox = document.getElementById('qPassageBox');
+      if (q.passage) {
+        document.getElementById('qPassageTitle').textContent = q.passageTitle || 'Teks Bacaan';
+        document.getElementById('qPassageText').innerHTML = q.passage;
+        passageBox.classList.remove('hidden');
+      } else {
+        passageBox.classList.add('hidden');
+      }
+
+      document.getElementById('qText').innerHTML = q.text.replace(/\n/g, '<br>');
+
+      const container = document.getElementById('qInteractiveBody');
+      container.innerHTML = '';
+
+      if (q.type === 'pg') {
+        renderPGQuestion(q, container);
+      } else if (q.type === 'dragdrop') {
+        renderDragDropQuestion(q, container);
+      } else if (q.type === 'matching') {
+        renderMatchingQuestion(q, container);
+      }
+
+      document.getElementById('btnPrev').disabled = state.currentIndex === 0;
+      if (state.currentIndex === total - 1) {
+        document.getElementById('btnNext').classList.add('hidden');
+        document.getElementById('btnFinish').classList.remove('hidden');
+      } else {
+        document.getElementById('btnNext').classList.remove('hidden');
+        document.getElementById('btnFinish').classList.add('hidden');
+      }
+    }
+
+    function renderPGQuestion(q, container) {
+      const letters = ['A', 'B', 'C', 'D', 'E'];
+      q.options.forEach((optText, idx) => {
+        const isSelected = state.answers[state.currentIndex] === idx;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.onclick = () => {
+          if (!state.examActive || state.terminatedByCheat) return;
+          state.answers[state.currentIndex] = idx;
+          renderQuestion();
+          renderQuestionGrid();
+          emitStudentHeartbeat('UJIAN');
+        };
+        btn.className = `w-full text-left p-3.5 sm:p-4 rounded-xl border transition-all flex items-start gap-3.5 cursor-pointer ${
+          isSelected
+            ? 'border-sunda-primary bg-sunda-primary/10 ring-2 ring-sunda-primary/25 shadow-2xs'
+            : 'border-stone-200 hover:border-sunda-light hover:bg-stone-50/80'
+        }`;
+
+        btn.innerHTML = `
+          <span class="w-7 h-7 rounded-lg shrink-0 flex items-center justify-center font-bold text-xs sm:text-sm transition-colors ${
+            isSelected ? 'bg-sunda-primary text-white' : 'bg-stone-100 text-slate-700'
+          }">${letters[idx]}</span>
+          <span class="text-sm sm:text-base font-medium text-slate-800 pt-0.5">${optText}</span>
+        `;
+        container.appendChild(btn);
+      });
+    }
+
+    function renderDragDropQuestion(q, container) {
+      const currentMap = state.answers[state.currentIndex] || {};
+      const unplacedItems = q.shuffledItems.filter(it => currentMap[it.id] === undefined);
+
+      const helper = document.createElement('div');
+      helper.className = "text-xs text-slate-600 bg-sunda-sand/80 px-3.5 py-2 rounded-xl border border-stone-200 flex flex-wrap items-center justify-between gap-2";
+      helper.innerHTML = `
+        <span>💡 <strong>Cara mengisi:</strong> Seret kartu ke kotak kategori, atau <strong>klik kartu</strong> lalu <strong>klik kotak tujuan</strong>.</span>
+        <button type="button" onclick="resetCurrentDragDrop()" class="text-rose-600 font-bold hover:underline cursor-pointer">Reset Jawaban</button>
+      `;
+      container.appendChild(helper);
+
+      const bankBox = document.createElement('div');
+      bankBox.className = "p-3.5 rounded-xl bg-stone-50 border border-dashed border-stone-300 min-h-[64px] flex flex-wrap gap-2 items-center";
+      if (unplacedItems.length === 0) {
+        bankBox.innerHTML = `<span class="text-xs font-semibold text-emerald-700">✓ Semua kartu sudah ditempatkan pada kotak kategori.</span>`;
+      } else {
+        unplacedItems.forEach(item => {
+          const isPicked = state.selectedChipId === item.id;
+          const chip = document.createElement('div');
+          chip.draggable = true;
+          chip.className = `px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold cursor-grab active:cursor-grabbing transition select-none shadow-2xs ${
+            isPicked
+              ? 'bg-amber-400 text-amber-950 ring-2 ring-amber-600'
+              : 'bg-white text-slate-800 border border-stone-300 hover:border-sunda-primary'
+          }`;
+          chip.textContent = item.label;
+
+          chip.addEventListener('dragstart', e => {
+            e.dataTransfer.setData('text/plain', item.id);
+            state.selectedChipId = item.id;
+          });
+
+          chip.addEventListener('click', () => {
+            if (!state.examActive || state.terminatedByCheat) return;
+            state.selectedChipId = (state.selectedChipId === item.id) ? null : item.id;
+            renderQuestion();
+          });
+
+          bankBox.appendChild(chip);
+        });
+      }
+      container.appendChild(bankBox);
+
+      const zonesGrid = document.createElement('div');
+      zonesGrid.className = `grid grid-cols-1 ${q.zones.length === 3 ? 'md:grid-cols-3' : 'sm:grid-cols-2'} gap-3 pt-1`;
+
+      q.zones.forEach((zoneTitle, zIdx) => {
+        const zoneCard = document.createElement('div');
+        zoneCard.className = `rounded-2xl border-2 border-stone-300 bg-white p-3.5 min-h-[140px] flex flex-col transition-all ${
+          state.selectedChipId ? 'border-dashed border-sunda-primary/70 cursor-pointer hover:bg-sunda-primary/5' : ''
+        }`;
+
+        zoneCard.addEventListener('dragover', e => {
+          e.preventDefault();
+          zoneCard.classList.add('drag-over-zone');
+        });
+        zoneCard.addEventListener('dragleave', () => {
+          zoneCard.classList.remove('drag-over-zone');
+        });
+        zoneCard.addEventListener('drop', e => {
+          e.preventDefault();
+          zoneCard.classList.remove('drag-over-zone');
+          if (!state.examActive || state.terminatedByCheat) return;
+          const itemId = e.dataTransfer.getData('text/plain') || state.selectedChipId;
+          if (itemId) placeDragItem(itemId, zIdx);
+        });
+        zoneCard.addEventListener('click', e => {
+          if (!state.examActive || state.terminatedByCheat) return;
+          if (e.target.closest('button[data-remove]')) return;
+          if (state.selectedChipId) {
+            placeDragItem(state.selectedChipId, zIdx);
+          }
+        });
+
+        const header = document.createElement('div');
+        header.className = "font-extrabold text-xs sm:text-sm text-sunda-primary pb-2 mb-2.5 border-b border-stone-100 flex items-center justify-between";
+        header.innerHTML = `<span>${zoneTitle}</span>`;
+        zoneCard.appendChild(header);
+
+        const placedList = document.createElement('div');
+        placedList.className = "space-y-2 flex-1";
+
+        const itemsInZone = q.shuffledItems.filter(it => currentMap[it.id] === zIdx);
+        if (itemsInZone.length === 0) {
+          placedList.innerHTML = `<div class="text-xs text-slate-400 italic py-4 text-center">Lepaskan / klik di sini...</div>`;
+        } else {
+          itemsInZone.forEach(it => {
+            const pill = document.createElement('div');
+            pill.draggable = true;
+            pill.addEventListener('dragstart', e => {
+              e.dataTransfer.setData('text/plain', it.id);
+              state.selectedChipId = it.id;
+            });
+            pill.className = "px-3 py-2 rounded-xl bg-sunda-primary text-white text-xs sm:text-sm font-semibold flex items-center justify-between gap-2 shadow-2xs";
+            pill.innerHTML = `
+              <span>${it.label}</span>
+              <button type="button" data-remove="1" title="Keluarkan" class="w-5 h-5 rounded-full bg-white/20 hover:bg-white/35 text-white flex items-center justify-center text-xs font-bold shrink-0 cursor-pointer">&times;</button>
+            `;
+            pill.querySelector('button').onclick = () => removeDragItem(it.id);
+            placedList.appendChild(pill);
+          });
+        }
+
+        zoneCard.appendChild(placedList);
+        zonesGrid.appendChild(zoneCard);
+      });
+
+      container.appendChild(zonesGrid);
+    }
+
+    function placeDragItem(itemId, zoneIdx) {
+      if (!state.examActive || state.terminatedByCheat) return;
+      state.answers[state.currentIndex][itemId] = zoneIdx;
+      state.selectedChipId = null;
+      renderQuestion();
+      renderQuestionGrid();
+      emitStudentHeartbeat('UJIAN');
+    }
+
+    function removeDragItem(itemId) {
+      if (!state.examActive || state.terminatedByCheat) return;
+      delete state.answers[state.currentIndex][itemId];
+      state.selectedChipId = null;
+      renderQuestion();
+      renderQuestionGrid();
+      emitStudentHeartbeat('UJIAN');
+    }
+
+    function resetCurrentDragDrop() {
+      if (!state.examActive || state.terminatedByCheat) return;
+      state.answers[state.currentIndex] = {};
+      state.selectedChipId = null;
+      renderQuestion();
+      renderQuestionGrid();
+      emitStudentHeartbeat('UJIAN');
+    }
+
+    function renderMatchingQuestion(q, container) {
+      const currentMap = state.answers[state.currentIndex] || {};
+      const badgeColors = [
+        'bg-emerald-600 text-white',
+        'bg-amber-600 text-white',
+        'bg-sky-600 text-white',
+        'bg-purple-600 text-white'
+      ];
+
+      const helper = document.createElement('div');
+      helper.className = "text-xs text-slate-600 bg-sunda-sand/80 px-3.5 py-2 rounded-xl border border-stone-200 flex flex-wrap items-center justify-between gap-2";
+      helper.innerHTML = `
+        <span>🔗 <strong>Cara mengisi:</strong> Klik satu pernyataan di <strong>kolom kiri</strong>, lalu klik pasangannya di <strong>kolom kanan</strong>.</span>
+        <button type="button" onclick="resetCurrentMatching()" class="text-rose-600 font-bold hover:underline cursor-pointer">Reset Pasangan</button>
+      `;
+      container.appendChild(helper);
+
+      const grid = document.createElement('div');
+      grid.className = "grid grid-cols-1 md:grid-cols-2 gap-4 pt-1";
+
+      const leftCol = document.createElement('div');
+      leftCol.className = "space-y-2.5";
+      leftCol.innerHTML = `<div class="text-xs font-extrabold uppercase tracking-wider text-slate-500">1. Istilah / Pernyataan</div>`;
+
+      q.pairs.forEach((pair, lIdx) => {
+        const isSelected = state.selectedLeftIdx === lIdx;
+        const matchedRightOrigIdx = currentMap[lIdx];
+        const hasMatch = matchedRightOrigIdx !== undefined;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.onclick = () => {
+          if (!state.examActive || state.terminatedByCheat) return;
+          state.selectedLeftIdx = (state.selectedLeftIdx === lIdx) ? null : lIdx;
+          renderQuestion();
+        };
+
+        btn.className = `w-full text-left p-3.5 rounded-xl border transition-all flex items-center justify-between gap-2.5 cursor-pointer ${
+          isSelected
+            ? 'border-amber-500 bg-amber-50 ring-2 ring-amber-400/50'
+            : hasMatch
+              ? 'border-sunda-primary bg-sunda-primary/5'
+              : 'border-stone-200 bg-white hover:border-sunda-light'
+        }`;
+
+        btn.innerHTML = `
+          <div class="flex items-center gap-2.5">
+            <span class="w-6 h-6 rounded-lg shrink-0 flex items-center justify-center text-xs font-extrabold ${
+              hasMatch ? badgeColors[lIdx % badgeColors.length] : 'bg-stone-200 text-slate-700'
+            }">${lIdx + 1}</span>
+            <span class="text-xs sm:text-sm font-bold text-slate-800">${pair.left}</span>
+          </div>
+          ${hasMatch ? `<span class="text-[11px] font-bold text-sunda-primary shrink-0">✓ Terpasang</span>` : ''}
+        `;
+        leftCol.appendChild(btn);
+      });
+
+      const rightCol = document.createElement('div');
+      rightCol.className = "space-y-2.5";
+      rightCol.innerHTML = `<div class="text-xs font-extrabold uppercase tracking-wider text-slate-500">2. Pilihan Pasangan</div>`;
+
+      q.shuffledRights.forEach(rObj => {
+        const pairedLeftEntry = Object.entries(currentMap).find(([k, v]) => Number(v) === rObj.origIdx);
+        const pairedLeftIdx = pairedLeftEntry ? Number(pairedLeftEntry[0]) : null;
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.onclick = () => {
+          if (!state.examActive || state.terminatedByCheat) return;
+          if (state.selectedLeftIdx !== null) {
+            Object.keys(currentMap).forEach(k => {
+              if (Number(currentMap[k]) === rObj.origIdx) delete currentMap[k];
+            });
+            currentMap[state.selectedLeftIdx] = rObj.origIdx;
+            state.selectedLeftIdx = null;
+            renderQuestion();
+            renderQuestionGrid();
+            emitStudentHeartbeat('UJIAN');
+          } else if (pairedLeftIdx !== null) {
+            delete currentMap[pairedLeftIdx];
+            renderQuestion();
+            renderQuestionGrid();
+            emitStudentHeartbeat('UJIAN');
+          } else {
+            showToast("Pilih dulu pernyataan di kolom kiri (nomor 1-4).", "info");
+          }
+        };
+
+        btn.className = `w-full text-left p-3.5 rounded-xl border transition-all flex items-start justify-between gap-2.5 cursor-pointer ${
+          state.selectedLeftIdx !== null
+            ? 'border-dashed border-sunda-primary hover:bg-sunda-primary/10'
+            : pairedLeftIdx !== null
+              ? 'border-sunda-primary bg-sunda-primary/5'
+              : 'border-stone-200 bg-white hover:bg-stone-50'
+        }`;
+
+        btn.innerHTML = `
+          <span class="text-xs sm:text-sm font-medium text-slate-800 leading-snug">${rObj.text}</span>
+          ${
+            pairedLeftIdx !== null
+              ? `<span class="px-2 py-0.5 rounded-md text-xs font-extrabold shrink-0 ${badgeColors[pairedLeftIdx % badgeColors.length]}">No. ${pairedLeftIdx + 1}</span>`
+              : `<span class="w-5 h-5 rounded-full border border-stone-300 shrink-0 mt-0.5"></span>`
+          }
+        `;
+        rightCol.appendChild(btn);
+      });
+
+      grid.appendChild(leftCol);
+      grid.appendChild(rightCol);
+      container.appendChild(grid);
+    }
+
+    function resetCurrentMatching() {
+      if (!state.examActive || state.terminatedByCheat) return;
+      state.answers[state.currentIndex] = {};
+      state.selectedLeftIdx = null;
+      renderQuestion();
+      renderQuestionGrid();
+      emitStudentHeartbeat('UJIAN');
+    }
+
+    function prevQuestion() {
+      if (!state.examActive || state.terminatedByCheat) return;
+      if (state.currentIndex > 0) {
+        state.currentIndex--;
+        state.selectedChipId = null;
+        state.selectedLeftIdx = null;
+        renderQuestion();
+        renderQuestionGrid();
+        emitStudentHeartbeat('UJIAN');
+      }
+    }
+
+    function nextQuestion() {
+      if (!state.examActive || state.terminatedByCheat) return;
+      if (state.currentIndex < state.activeQuestions.length - 1) {
+        state.currentIndex++;
+        state.selectedChipId = null;
+        state.selectedLeftIdx = null;
+        renderQuestion();
+        renderQuestionGrid();
+        emitStudentHeartbeat('UJIAN');
+      }
+    }
+
+    function jumpToQuestion(idx) {
+      if (!state.examActive || state.terminatedByCheat) return;
+      state.currentIndex = idx;
+      state.selectedChipId = null;
+      state.selectedLeftIdx = null;
+      renderQuestion();
+      renderQuestionGrid();
+      emitStudentHeartbeat('UJIAN');
+    }
+
+    function renderQuestionGrid() {
+      const grid = document.getElementById('questionGrid');
+      grid.innerHTML = '';
+      let answeredCount = 0;
+
+      state.activeQuestions.forEach((_, idx) => {
+        const isAnswered = isQuestionAnswered(idx);
+        const isCurrent = idx === state.currentIndex;
+        if (isAnswered) answeredCount++;
+
+        let styleClass = "bg-stone-100 text-slate-700 border border-stone-300 hover:bg-stone-200";
+        if (isAnswered) {
+          styleClass = "bg-sunda-primary text-white font-bold border border-sunda-primary";
+        }
+        if (isCurrent) {
+          styleClass += " ring-2 ring-offset-1 ring-slate-800";
+        }
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.onclick = () => jumpToQuestion(idx);
+        btn.className = `h-8 rounded-lg text-xs font-semibold transition flex items-center justify-center cursor-pointer ${styleClass}`;
+        btn.textContent = idx + 1;
+        grid.appendChild(btn);
+      });
+
+      document.getElementById('answeredCountText').textContent = `${answeredCount} / ${state.activeQuestions.length} Terisi`;
+    }
+
+    // =========================================================================
+    // 8. SUBMIT EXAM, GRADING ENGINE & SYNC TO GOOGLE APPS SCRIPT
+    // =========================================================================
+    function openSubmitModal() {
+      if (!state.examActive || state.terminatedByCheat) return;
+      let unanswered = 0;
+      state.activeQuestions.forEach((_, idx) => {
+        if (!isQuestionAnswered(idx)) unanswered++;
+      });
+      const summaryEl = document.getElementById('submitModalSummary');
+      if (unanswered > 0) {
+        summaryEl.innerHTML = `Masih ada <strong class="text-rose-600">${unanswered} soal</strong> yang belum dijawab. Yakin ingin mengumpulkan jawaban sekarang?`;
+      } else {
+        summaryEl.textContent = `Semua ${state.activeQuestions.length} soal sudah dijawab. Yakin ingin mengumpulkan jawaban sekarang?`;
+      }
+      document.getElementById('submitModal').classList.remove('hidden');
+    }
+
+    function closeSubmitModal() {
+      document.getElementById('submitModal').classList.add('hidden');
+    }
+
+    function evaluateSingleQuestion(q, ans) {
+      if (!q || ans === null || ans === undefined) return false;
+      if (q.type === 'pg') {
+        return ans === q.answer;
+      } else if (q.type === 'dragdrop') {
+        if (Object.keys(ans).length !== q.items.length) return false;
+        return q.items.every(it => ans[it.id] === it.targetZone);
+      } else if (q.type === 'matching') {
+        if (Object.keys(ans).length !== q.pairs.length) return false;
+        return q.pairs.every((_, lIdx) => Number(ans[lIdx]) === lIdx);
+      }
+      return false;
+    }
+
+    async function submitExam(options = {}) {
+      if (state.examSubmitted) return;
+      state.examSubmitted = true;
+
+      const terminatedByCheat = Boolean(options && options.terminatedByCheat) || state.terminatedByCheat || state.violations >= 3;
+      closeSubmitModal();
+      state.examActive = false;
+
+      let benar = 0;
+      const catStats = {};
+
+      state.activeQuestions.forEach((q, idx) => {
+        if (!catStats[q.category]) catStats[q.category] = { total: 0, correct: 0 };
+        catStats[q.category].total++;
+
+        const isCorrect = evaluateSingleQuestion(q, state.answers[idx]);
+        if (isCorrect) {
+          benar++;
+          catStats[q.category].correct++;
+        }
+      });
+
+      const totalQ = state.activeQuestions.length;
+      const skor = Math.round((benar / totalQ) * 100);
+      const status = terminatedByCheat
+        ? 'Terindikasi Curang (3x - Dihentikan)'
+        : state.violations >= 2
+          ? 'Terindikasi Curang'
+          : 'Aman';
+
+      emitStudentHeartbeat('SELESAI', skor);
+
+      const payload = {
+        nama: state.student.nama,
+        kelas: state.student.kelas,
+        absen: state.student.absen,
+        skor: skor,
+        benar: benar,
+        status: status
+      };
+
+      const now = new Date();
+      const ts = `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+
+      try {
+        const localList = JSON.parse(localStorage.getItem(STORAGE_KEY_LOCAL_RECAP) || '[]');
+        localList.push([ts, payload.nama, payload.kelas, payload.absen, payload.skor, payload.benar, payload.status]);
+        localStorage.setItem(STORAGE_KEY_LOCAL_RECAP, JSON.stringify(localList));
+      } catch (e) {}
+
+      const terminatedBanner = document.getElementById('cheatTerminatedBanner');
+      const resIcon = document.getElementById('resultHeaderIcon');
+      const resTitle = document.getElementById('resultHeaderTitle');
+      const resSub = document.getElementById('resultHeaderSubtitle');
+
+      if (terminatedByCheat) {
+        if (terminatedBanner) terminatedBanner.classList.remove('hidden');
+        if (resIcon) resIcon.textContent = '⛔';
+        if (resTitle) resTitle.textContent = 'Ujian Dihentikan Otomatis!';
+        if (resSub) resSub.textContent = 'Teridentifikasi melakukan kecurangan 3 kali — Nilai telah otomatis direkam.';
+      } else {
+        if (terminatedBanner) terminatedBanner.classList.add('hidden');
+        if (resIcon) resIcon.textContent = '🎉';
+        if (resTitle) resTitle.textContent = 'Terima Kasih!';
+        if (resSub) resSub.textContent = 'Jawaban ASAS 1 Bahasa Indonesia telah tercatat di sistem.';
+      }
+
+      document.getElementById('resSkor').textContent = skor;
+      document.getElementById('resBenar').textContent = `Benar ${benar} dari ${totalQ} soal`;
+      document.getElementById('resNama').textContent = payload.nama;
+      document.getElementById('resKelasAbsen').textContent = `${payload.kelas} / Absen ${payload.absen}`;
+      document.getElementById('resTime').textContent = ts;
+
+      const resStatusEl = document.getElementById('resStatus');
+      resStatusEl.textContent = status;
+      if (status.toLowerCase().includes('curang')) {
+        resStatusEl.className = "font-bold px-2.5 py-0.5 rounded-md text-xs bg-rose-100 text-rose-800";
+      } else {
+        resStatusEl.className = "font-bold px-2.5 py-0.5 rounded-md text-xs bg-emerald-100 text-emerald-800";
+      }
+
+      const breakdownEl = document.getElementById('categoryBreakdown');
+      breakdownEl.innerHTML = Object.entries(catStats).map(([cat, st]) => {
+        const pct = Math.round((st.correct / st.total) * 100);
+        return `
+          <div class="p-3 rounded-xl bg-stone-50 border border-stone-200/80">
+            <div class="text-xs font-bold text-slate-700 truncate">${cat}</div>
+            <div class="text-lg font-extrabold text-sunda-primary mt-0.5">${st.correct} / ${st.total} <span class="text-xs font-semibold text-slate-500">(${pct}%)</span></div>
+          </div>
+        `;
+      }).join('');
+
+      buildReviewList();
+      document.getElementById('reviewContainer').classList.add('hidden');
+      refreshReviewButton();
+      startReviewPolling();
+
+      document.getElementById('viewExam').classList.add('hidden');
+      document.getElementById('viewResult').classList.remove('hidden');
+      if (!terminatedByCheat) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      const syncBox = document.getElementById('syncStatusBox');
+      if (state.gasUrl) {
+        syncBox.className = "p-3 rounded-xl text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200";
+        syncBox.textContent = "Sedang mengirim data ke Google Sheets...";
+        try {
+          await fetch(state.gasUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+          });
+          syncBox.className = "p-3 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200";
+          syncBox.textContent = "✓ Berhasil terkirim ke Google Sheets (Rekap SAS)!";
+        } catch (err) {
+          syncBox.className = "p-3 rounded-xl text-xs font-semibold bg-rose-50 text-rose-800 border border-rose-200";
+          syncBox.textContent = "Gagal terhubung ke server Google, data disimpan secara lokal.";
+        }
+      } else {
+        syncBox.className = "p-3 rounded-xl text-xs font-semibold bg-stone-100 text-slate-700 border border-stone-200";
+        syncBox.textContent = "Hasil ujian telah disimpan di rekaman lokal browser.";
+      }
+    }
+
+    // --- PERSETUJUAN PEMBAHASAN OLEH GURU/PROKTOR ---
+    const STORAGE_KEY_REVIEW_APPROVALS = 'asas_indo_review_approvals';
+    let reviewPollTimer = null;
+
+    function getReviewApprovals() {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY_REVIEW_APPROVALS) || '{}'); } catch (e) { return {}; }
+    }
+    function isReviewApproved(sessionId) {
+      const a = getReviewApprovals();
+      return !!(a.__ALL__ || a[sessionId]);
+    }
+    function setReviewApproval(sessionId, val) {
+      const a = getReviewApprovals();
+      if (val) a[sessionId] = true; else { delete a[sessionId]; delete a.__ALL__; }
+      try { localStorage.setItem(STORAGE_KEY_REVIEW_APPROVALS, JSON.stringify(a)); } catch (e) {}
+      if (liveChannel) { try { liveChannel.postMessage({ type: 'REVIEW_APPROVAL' }); } catch (e) {} }
+      renderLiveMonitor();
+      refreshReviewButton();
+    }
+    function approveAllReviews() {
+      const a = getReviewApprovals();
+      a.__ALL__ = true;
+      try { localStorage.setItem(STORAGE_KEY_REVIEW_APPROVALS, JSON.stringify(a)); } catch (e) {}
+      if (liveChannel) { try { liveChannel.postMessage({ type: 'REVIEW_APPROVAL' }); } catch (e) {} }
+      renderLiveMonitor();
+      showToast("Pembahasan disetujui untuk semua siswa.", "success");
+    }
+    function lockAllReviews() {
+      try { localStorage.removeItem(STORAGE_KEY_REVIEW_APPROVALS); } catch (e) {}
+      if (liveChannel) { try { liveChannel.postMessage({ type: 'REVIEW_APPROVAL' }); } catch (e) {} }
+      renderLiveMonitor();
+      refreshReviewButton();
+      showToast("Semua pembahasan dikunci kembali.", "info");
+    }
+    function refreshReviewButton() {
+      const btn = document.getElementById('btnToggleReview');
+      const note = document.getElementById('reviewLockNote');
+      const box = document.getElementById('reviewContainer');
+      if (!btn || !state.sessionId) return;
+      if (isReviewApproved(state.sessionId)) {
+        const open = box && !box.classList.contains('hidden');
+        btn.className = "flex-1 py-2.5 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm transition cursor-pointer";
+        btn.removeAttribute('aria-disabled');
+        btn.textContent = open ? 'Tutup Pembahasan' : 'Lihat Kunci & Pembahasan';
+        if (note) note.classList.add('hidden');
+      } else {
+        btn.className = "flex-1 py-2.5 px-4 rounded-xl bg-slate-400 text-white font-semibold text-sm transition cursor-not-allowed";
+        btn.setAttribute('aria-disabled', 'true');
+        btn.textContent = '🔒 Pembahasan Terkunci';
+        if (note) note.classList.remove('hidden');
+        if (box) box.classList.add('hidden');
+      }
+    }
+    function startReviewPolling() {
+      if (reviewPollTimer) clearInterval(reviewPollTimer);
+      reviewPollTimer = setInterval(refreshReviewButton, 2000);
+    }
+    window.addEventListener('storage', (e) => { if (e.key === STORAGE_KEY_REVIEW_APPROVALS) refreshReviewButton(); });
+
+    function toggleReviewAnswers() {
+      if (!isReviewApproved(state.sessionId)) {
+        showToast("Pembahasan masih terkunci. Menunggu persetujuan guru/proktor.", "warning");
+        return;
+      }
+      const box = document.getElementById('reviewContainer');
+      const btn = document.getElementById('btnToggleReview');
+      if (box.classList.contains('hidden')) {
+        box.classList.remove('hidden');
+        btn.textContent = 'Tutup Pembahasan';
+        box.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        box.classList.add('hidden');
+        btn.textContent = 'Lihat Kunci & Pembahasan';
+      }
+    }
+
+    function buildReviewList() {
+      const list = document.getElementById('reviewList');
+      const letters = ['A', 'B', 'C', 'D', 'E'];
+
+      list.innerHTML = state.activeQuestions.map((q, idx) => {
+        const isCorrect = evaluateSingleQuestion(q, state.answers[idx]);
+        let keySummary = '';
+
+        if (q.type === 'pg') {
+          keySummary = `Kunci Jawaban: <strong>${letters[q.answer]}. ${q.options[q.answer]}</strong>`;
+        } else if (q.type === 'dragdrop') {
+          keySummary = q.zones.map((zName, zIdx) => {
+            const members = q.items.filter(it => it.targetZone === zIdx).map(it => it.label).join(', ');
+            return `<div>• <strong>${zName}:</strong> ${members}</div>`;
+          }).join('');
+        } else if (q.type === 'matching') {
+          keySummary = q.pairs.map(p => `<div>• <strong>${p.left}</strong> → ${p.right}</div>`).join('');
+        }
+
+        return `
+          <div class="p-4 rounded-xl border ${isCorrect ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'} space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-xs font-extrabold text-slate-700">No. ${idx + 1} • ${q.category} (${q.difficulty})</span>
+              <span class="px-2 py-0.5 rounded text-xs font-bold ${isCorrect ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'}">
+                ${isCorrect ? '✓ Benar' : '✕ Salah'}
+              </span>
+            </div>
+            ${q.passage ? `<div class="text-xs text-amber-950 bg-amber-50/90 border-l-2 border-amber-500 p-2.5 rounded-r-lg whitespace-pre-line"><strong>${q.passageTitle || 'Teks'}:</strong>
+${q.passage}</div>` : ''}
+            <div class="text-sm font-semibold text-slate-800">${q.text.replace(/\n/g, '<br>')}</div>
+            <div class="text-xs text-sunda-dark bg-white/80 p-2.5 rounded-lg border border-stone-200/80 space-y-1">
+              ${keySummary}
+            </div>
+            <div class="text-xs text-slate-600 italic"><strong>Pembahasan:</strong> ${q.explanation}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // =========================================================================
+    // 9. PORTAL GURU (REKAP NILAI, FILTER 12 KELAS, CSV & LIVE MONITOR)
+    // =========================================================================
+    function toggleTeacherPassVisibility() {
+      const inp = document.getElementById('teacherPassInput');
+      inp.type = inp.type === 'password' ? 'text' : 'password';
+    }
+
+    function lockTeacherDashboard() {
+      state.teacherUnlocked = false;
+      state.teacherPass = '';
+      document.getElementById('teacherPassInput').value = '';
+      document.getElementById('teacherGateError').classList.add('hidden');
+      document.getElementById('teacherDashboard').classList.add('hidden');
+      document.getElementById('teacherLoginGate').classList.remove('hidden');
+      showToast("Portal Guru dikunci.", "info");
+    }
+
+    function switchTeacherSubTab(sub) {
+      state.teacherSubTab = sub;
+      const btnRekap = document.getElementById('subTabRekap');
+      const btnMon = document.getElementById('subTabMonitor');
+      const panelRekap = document.getElementById('panelTeacherRekap');
+      const panelMon = document.getElementById('panelTeacherMonitor');
+
+      if (sub === 'rekap') {
+        btnRekap.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-sunda-primary text-white shadow-2xs transition cursor-pointer";
+        btnMon.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-stone-100 text-slate-700 hover:bg-stone-200 transition flex items-center gap-2 cursor-pointer";
+        panelRekap.classList.remove('hidden');
+        panelMon.classList.add('hidden');
+        loadRecapData();
+      } else {
+        btnMon.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-sunda-primary text-white shadow-2xs transition flex items-center gap-2 cursor-pointer";
+        btnRekap.className = "px-4 py-2 rounded-xl text-xs sm:text-sm font-extrabold bg-stone-100 text-slate-700 hover:bg-stone-200 transition cursor-pointer";
+        panelRekap.classList.add('hidden');
+        panelMon.classList.remove('hidden');
+        pollLiveMonitorSources();
+      }
+    }
+
+    function setRecapSourceMode(mode) {
+      state.recapSourceMode = mode;
+      const tabs = {
+        auto: document.getElementById('srcTabAuto'),
+        sheets: document.getElementById('srcTabSheets'),
+        local: document.getElementById('srcTabLocal')
+      };
+      Object.entries(tabs).forEach(([key, el]) => {
+        if (!el) return;
+        if (key === mode) {
+          el.className = "px-3 py-1.5 rounded-xl text-xs font-bold bg-sunda-primary text-white shadow-2xs transition cursor-pointer";
+        } else {
+          el.className = "px-3 py-1.5 rounded-xl text-xs font-bold bg-stone-100 text-slate-700 hover:bg-stone-200 transition cursor-pointer";
+        }
+      });
+      updateConnectionIndicator();
+      loadRecapData();
+    }
+
+    async function unlockTeacherDashboard() {
+      const passInput = document.getElementById('teacherPassInput');
+      const gateErr = document.getElementById('teacherGateError');
+      const btn = document.getElementById('btnUnlockTeacher');
+      const pass = passInput.value.trim();
+
+      if (!pass) {
+        gateErr.textContent = "⚠️ Silakan masukkan password guru terlebih dahulu!";
+        gateErr.classList.remove('hidden');
+        passInput.focus();
+        return;
+      }
+
+      gateErr.classList.add('hidden');
+
+      if (state.gasUrl) {
+        btn.disabled = true;
+        btn.innerHTML = `<span>⏳ Memeriksa password ke Google Sheets...</span>`;
+        try {
+          const url = `${state.gasUrl}?action=rekap&pass=${encodeURIComponent(pass)}`;
+          const res = await fetch(url);
+          const json = await res.json();
+          if (json && json.ok && Array.isArray(json.rows)) {
+            state.teacherPass = pass;
+            state.teacherUnlocked = true;
+            state.recapRows = json.rows.slice(1);
+            document.getElementById('teacherLoginGate').classList.add('hidden');
+            document.getElementById('teacherDashboard').classList.remove('hidden');
+            refreshTokenDisplays();
+            updateConnectionIndicator();
+            updateStatsAndTable();
+            pollLiveMonitorSources();
+            showToast("Password benar! Data Google Sheets sudah dimuat.", "success");
+            return;
+          } else {
+            gateErr.textContent = `❌ ${json.msg || "Password guru salah! Periksa kembali PASSWORD_GURU di Apps Script."}`;
+            gateErr.classList.remove('hidden');
+            return;
+          }
+        } catch (err) {
+          if (!isTeacherPassValid(pass)) {
+            gateErr.textContent = "❌ Gagal terhubung ke Google Sheets dan password lokal tidak cocok.";
+            gateErr.classList.remove('hidden');
+            return;
+          }
+          showToast("Server Google tidak terjangkau, membuka rekaman lokal browser.", "warning");
+        } finally {
+          btn.disabled = false;
+          btn.innerHTML = `<span>🔓 Buka Portal Rekap &amp; Proktor</span>`;
+        }
+      } else {
+        if (!isTeacherPassValid(pass)) {
+          gateErr.textContent = "❌ Password guru salah! Hubungi proktor jika lupa password";
+          gateErr.classList.remove('hidden');
+          passInput.focus();
+          return;
+        }
+      }
+
+      state.teacherPass = pass;
+      state.teacherUnlocked = true;
+      document.getElementById('teacherLoginGate').classList.add('hidden');
+      document.getElementById('teacherDashboard').classList.remove('hidden');
+      refreshTokenDisplays();
+      updateConnectionIndicator();
+      loadRecapData();
+      pollLiveMonitorSources();
+    }
+
+    async function loadRecapData() {
+      const tbody = document.getElementById('recapTableBody');
+      tbody.innerHTML = `<tr><td colspan="8" class="py-8 text-center text-slate-500 text-sm">Sedang memuat data rekap...</td></tr>`;
+      updateConnectionIndicator();
+
+      const useSheets = (state.recapSourceMode === 'sheets') || (state.recapSourceMode === 'auto' && Boolean(state.gasUrl));
+
+      if (useSheets) {
+        if (!state.gasUrl) {
+          state.recapRows = [];
+          updateStatsAndTable();
+          showToast("URL Google Apps Script belum diatur. Klik tombol ⚙️ URL Google Sheet.", "warning");
+          return;
+        }
+        try {
+          const url = `${state.gasUrl}?action=rekap&pass=${encodeURIComponent(state.teacherPass)}`;
+          const res = await fetch(url);
+          const json = await res.json();
+          if (json && json.ok && Array.isArray(json.rows)) {
+            state.recapRows = json.rows.slice(1);
+            updateStatsAndTable();
+            showToast(`Berhasil memuat ${state.recapRows.length} data dari Google Sheets.`, "success");
+            return;
+          } else {
+            showToast(json.msg || "Password guru salah atau gagal membaca Sheets.", "error");
+            lockTeacherDashboard();
+            return;
+          }
+        } catch (err) {
+          if (state.recapSourceMode === 'sheets') {
+            state.recapRows = [];
+            updateStatsAndTable();
+            showToast("Gagal terhubung ke Google Sheets. Pastikan deployment diatur 'Anyone'.", "error");
+            return;
+          }
+          showToast("Gagal terhubung ke Google Sheets, menampilkan rekaman lokal.", "warning");
+        }
+      }
+
+      state.recapRows = JSON.parse(localStorage.getItem(STORAGE_KEY_LOCAL_RECAP) || '[]');
+      updateStatsAndTable();
+    }
+
+    async function syncLocalRecordsToSheets() {
+      if (!state.gasUrl) {
+        showToast("Atur dulu URL Google Apps Script di ikon ⚙️.", "warning");
+        return;
+      }
+      const localList = JSON.parse(localStorage.getItem(STORAGE_KEY_LOCAL_RECAP) || '[]');
+      if (localList.length === 0) {
+        showToast("Tidak ada rekaman lokal yang perlu dikirim.", "info");
+        return;
+      }
+      const btn = document.getElementById('btnSyncLocalToSheet');
+      btn.disabled = true;
+      btn.textContent = "⏳ Sedang mengirim...";
+      try {
+        for (const r of localList) {
+          const payload = {
+            nama: r[1],
+            kelas: r[2],
+            absen: r[3],
+            skor: Number(r[4]) || 0,
+            benar: Number(r[5]) || 0,
+            status: r[6] || 'Aman'
+          };
+          await fetch(state.gasUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+          });
+        }
+        showToast(`${localList.length} rekaman lokal sudah dikirim ke Google Sheets!`, "success");
+        setTimeout(() => loadRecapData(), 1200);
+      } catch (err) {
+        showToast("Gagal mengirim rekaman lokal ke Google Sheets.", "error");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "☁️ Kirim Rekaman Lokal ke Google Sheet";
+      }
+    }
+
+    function updateStatsAndTable() {
+      const rows = state.recapRows;
+      const total = rows.length;
+      let sum = 0;
+      let max = 0;
+      let cheatCount = 0;
+
+      rows.forEach(r => {
+        const skor = Number(r[4]) || 0;
+        sum += skor;
+        if (skor > max) max = skor;
+        if (String(r[6]).toLowerCase().includes('curang')) cheatCount++;
+      });
+
+      document.getElementById('statTotal').textContent = total;
+      document.getElementById('statAvg').textContent = total > 0 ? Math.round(sum / total) : 0;
+      document.getElementById('statMax').textContent = max;
+      document.getElementById('statCheat').textContent = cheatCount;
+
+      const kelasSelect = document.getElementById('filterKelasSelect');
+      if (kelasSelect) {
+        const prevVal = kelasSelect.value;
+        const extraClasses = rows
+          .map(r => String(r[2] || '').trim())
+          .filter(c => c && !OFFICIAL_CLASSES.includes(c))
+          .sort();
+        const allClasses = [...OFFICIAL_CLASSES, ...Array.from(new Set(extraClasses))];
+        kelasSelect.innerHTML = `<option value="ALL">Semua Kelas (${allClasses.length} Kelas)</option>` +
+          allClasses.map(k => `<option value="${k.replace(/"/g, '&quot;')}">${k}</option>`).join('');
+        if (prevVal === 'ALL' || allClasses.includes(prevVal)) {
+          kelasSelect.value = prevVal;
+        }
+      }
+
+      renderRecapTable();
+    }
+
+    function getFilteredRecapRows() {
+      const query = document.getElementById('searchRecapInput').value.toLowerCase();
+      const kelasFilter = document.getElementById('filterKelasSelect').value;
+      const statusFilter = document.getElementById('filterStatusSelect').value;
+
+      return state.recapRows.filter(r => {
+        const nama = String(r[1] || '').toLowerCase();
+        const kelas = String(r[2] || '').trim();
+        const absen = String(r[3] || '').toLowerCase();
+        const status = String(r[6] || 'Aman');
+        const matchesQuery = nama.includes(query) || kelas.toLowerCase().includes(query) || absen.includes(query);
+        const matchesKelas = kelasFilter === 'ALL' || kelas === kelasFilter;
+        const matchesStatus = statusFilter === 'ALL'
+          || (statusFilter === 'Terindikasi Curang' && status.toLowerCase().includes('curang'))
+          || status === statusFilter;
+        return matchesQuery && matchesKelas && matchesStatus;
+      });
+    }
+
+    function renderRecapTable() {
+      const tbody = document.getElementById('recapTableBody');
+      const filtered = getFilteredRecapRows();
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="py-8 text-center text-slate-400 text-sm">Tidak ada data rekap siswa yang ditemukan pada kelas/filter ini.</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(r => {
+        const isCheat = String(r[6]).toLowerCase().includes('curang');
+        const rowBg = isCheat ? 'style="background-color: #fbe3e1;"' : 'class="hover:bg-stone-50"';
+        const badgeClass = isCheat
+          ? 'bg-rose-600 text-white'
+          : 'bg-emerald-100 text-emerald-800';
+
+        return `
+          <tr ${rowBg}>
+            <td class="py-3 px-4 text-xs text-slate-600 whitespace-nowrap">${r[0] || '-'}</td>
+            <td class="py-3 px-2 text-center">
+              <button type="button" onclick="deleteRecapRow(${state.recapRows.indexOf(r)})" title="Hapus hasil ujian siswa ini" class="w-8 h-8 rounded-lg bg-rose-50 hover:bg-rose-600 text-rose-600 hover:text-white border border-rose-200 transition cursor-pointer text-sm">🗑️</button>
+            </td>
+            <td class="py-3 px-4 font-bold text-slate-800">${r[1] || '-'}</td>
+            <td class="py-3 px-4 font-semibold text-slate-700">${r[2] || '-'}</td>
+            <td class="py-3 px-4 text-slate-700">${r[3] || '-'}</td>
+            <td class="py-3 px-4 font-extrabold text-sunda-primary">${r[4] ?? 0}</td>
+            <td class="py-3 px-4 text-slate-700">${r[5] ?? 0} / 50</td>
+            <td class="py-3 px-4">
+              <span class="px-2.5 py-1 rounded-full text-xs font-bold whitespace-nowrap ${badgeClass}">
+                ${r[6] || 'Aman'}
+              </span>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // --- MUAT ULANG TANPA KELUAR DARI PORTAL ---
+    async function reloadTeacherPortal() {
+      try { refreshTokenDisplays(); } catch (e) {}
+      try { renderLiveMonitor(); } catch (e) {}
+      await pollLiveMonitorSources();
+      await loadRecapData();
+      renderLiveMonitor();
+      showToast("Semua data portal guru dimuat ulang.", "success");
+    }
+
+    // --- HAPUS HASIL UJIAN SISWA ---
+    async function deleteRecapRow(idx) {
+      const r = state.recapRows[idx];
+      if (!r) return;
+      if (!confirm(`Hapus hasil ujian ${r[1] || 'siswa ini'} (Kelas ${r[2] || '-'}, Absen ${r[3] || '-'}, Skor ${r[4] ?? 0})?\nTindakan ini tidak dapat dibatalkan.`)) return;
+
+      const same = x => String(x[0]) === String(r[0]) && String(x[1]) === String(r[1]) && String(x[2]) === String(r[2]) && String(x[3]) === String(r[3]);
+
+      try {
+        const local = JSON.parse(localStorage.getItem(STORAGE_KEY_LOCAL_RECAP) || '[]');
+        localStorage.setItem(STORAGE_KEY_LOCAL_RECAP, JSON.stringify(local.filter(x => !same(x))));
+      } catch (e) {}
+
+      let sheetNote = '';
+      if (state.gasUrl) {
+        try {
+          const q = `action=hapus&pass=${encodeURIComponent(state.teacherPass)}&timestamp=${encodeURIComponent(r[0])}&nama=${encodeURIComponent(r[1])}&kelas=${encodeURIComponent(r[2])}&absen=${encodeURIComponent(r[3])}`;
+          const res = await fetch(`${state.gasUrl}?${q}`);
+          const json = await res.json();
+          if (!(json && json.ok)) sheetNote = ' (Baris di Google Sheets belum terhapus: Apps Script belum mendukung aksi hapus)';
+        } catch (e) {
+          sheetNote = ' (Baris di Google Sheets belum terhapus)';
+        }
+      }
+
+      state.recapRows = state.recapRows.filter(x => !same(x));
+      updateStatsAndTable();
+      showToast(`Hasil ujian ${r[1] || 'siswa'} dihapus.${sheetNote}`, sheetNote ? 'warning' : 'success');
+    }
+
+    function exportToCSV() {
+      const rowsToExport = getFilteredRecapRows();
+      if (rowsToExport.length === 0) {
+        showToast("Tidak ada data yang dapat diunduh.", "warning");
+        return;
+      }
+
+      const headers = ['Timestamp', 'Nama Siswa', 'Kelas', 'No. Absen', 'Skor Akhir', 'Jumlah Benar', 'Status Pelanggaran'];
+      const csvLines = [headers.join(',')];
+      rowsToExport.forEach(r => {
+        const escaped = r.map(val => `"${String(val ?? '').replace(/"/g, '""')}"`);
+        csvLines.push(escaped.join(','));
+      });
+
+      const bom = '\uFEFF';
+      const blob = new Blob([bom + csvLines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      const kelasTag = document.getElementById('filterKelasSelect').value.replace(/\s+/g, '_');
+      link.href = URL.createObjectURL(blob);
+      link.download = `Rekap_ASAS1_Bahasa_Indonesia_${kelasTag}_${new Date().toISOString().slice(0, 10)}.csv`;
+      link.click();
+      showToast(`Berhasil mengunduh ${rowsToExport.length} data siswa ke file CSV.`, "success");
+    }
+
+    // --- 9B. LIVE MONITOR PROKTOR ENGINE ---
+    async function pollLiveMonitorSources() {
+      if (!state.teacherUnlocked) return;
+      try {
+        const localObj = JSON.parse(localStorage.getItem(STORAGE_KEY_LIVE_SESSIONS) || '{}');
+        Object.values(localObj).forEach(item => {
+          const prev = state.liveSessionsMap[item.sessionId];
+          if (!prev || (item.updatedAt || 0) >= (prev.updatedAt || 0)) {
+            state.liveSessionsMap[item.sessionId] = item;
+          }
+        });
+      } catch (e) {}
+
+      if (state.gasUrl) {
+        try {
+          const res = await fetch(`${state.gasUrl}?action=live&pass=${encodeURIComponent(state.teacherPass)}`);
+          const json = await res.json();
+          if (json && json.ok && Array.isArray(json.sessions)) {
+            json.sessions.forEach(item => {
+              const prev = state.liveSessionsMap[item.sessionId];
+              if (!prev || (item.updatedAt || 0) >= (prev.updatedAt || 0)) {
+                state.liveSessionsMap[item.sessionId] = item;
+              }
+            });
+          }
+        } catch (err) {}
+      }
+
+      renderLiveMonitor();
+    }
+
+    function clearLiveMonitorSessions() {
+      localStorage.removeItem(STORAGE_KEY_LIVE_SESSIONS);
+      state.liveSessionsMap = {};
+      renderLiveMonitor();
+      showToast("Log sesi live monitor sudah dibersihkan.", "info");
+    }
+
+    function renderLiveMonitor() {
+      const allList = Object.values(state.liveSessionsMap).sort((a, b) => (b.updatedAt || 0) - (a.updatedAt || 0));
+      const activeCount = allList.filter(s => s.phase !== 'SELESAI').length;
+      const badgeEl = document.getElementById('liveActiveBadge');
+      if (badgeEl) badgeEl.textContent = `${activeCount} Aktif`;
+
+      const q = (document.getElementById('filterMonitorSearch')?.value || '').toLowerCase();
+      const kelasF = document.getElementById('filterKelasMonitor')?.value || 'ALL';
+      const phaseF = document.getElementById('filterMonitorPhase')?.value || 'ALL';
+
+      const filtered = allList.filter(s => {
+        const matchText = String(s.nama || '').toLowerCase().includes(q) || String(s.kelas || '').toLowerCase().includes(q);
+        const matchKelas = kelasF === 'ALL' || String(s.kelas || '').trim() === kelasF;
+        const matchPhase = phaseF === 'ALL' || s.phase === phaseF;
+        return matchText && matchKelas && matchPhase;
+      });
+
+      const grid = document.getElementById('liveMonitorGrid');
+      if (!grid) return;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white rounded-2xl border border-dashed border-stone-300 p-10 text-center space-y-2">
+            <div class="text-3xl">📡</div>
+            <div class="font-bold text-slate-700">Belum ada sesi siswa aktif pada filter ini</div>
+            <p class="text-xs text-slate-500 max-w-md mx-auto">
+              Buka tab baru dan masuk ke <strong>Ruang Siswa</strong> untuk memulai ujian. Progres siswa akan langsung tampil secara real-time di sini.
+            </p>
+          </div>
+        `;
+        return;
+      }
+
+      const now = Date.now();
+      grid.innerHTML = filtered.map(s => {
+        const pct = Math.min(100, Math.round(((s.answered || 0) / (s.totalQ || 50)) * 100));
+        const isLockedCheat = s.terminatedByCheat || (s.violations || 0) >= 3;
+        const isCheat = (s.violations || 0) >= 2;
+        const isWarn = (s.violations || 0) === 1;
+        const secAgo = Math.max(0, Math.round((now - (s.updatedAt || now)) / 1000));
+        const isOffline = s.phase !== 'SELESAI' && secAgo > 20;
+
+        const cardBorder = isCheat
+          ? 'border-rose-400 bg-rose-50/40'
+          : isWarn
+            ? 'border-amber-400 bg-amber-50/30'
+            : 'border-stone-200 bg-white';
+
+        const statusBadge = isLockedCheat
+          ? '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-rose-700 text-white">Dihentikan (3x Curang)</span>'
+          : isCheat
+            ? `<span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-rose-600 text-white">Curang (${s.violations}/3)</span>`
+            : isWarn
+              ? '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-amber-500 text-slate-950">Peringatan (1/3)</span>'
+              : '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-100 text-emerald-800">Aman</span>';
+
+        const phaseBadge = s.phase === 'SELESAI'
+          ? `<span class="px-2 py-0.5 rounded-md text-[11px] font-bold ${isLockedCheat ? 'bg-rose-100 text-rose-800' : 'bg-sky-100 text-sky-800'}">${isLockedCheat ? '⛔ Dihentikan' : '✓ Selesai'} (Skor: ${s.finalScore ?? '-'})</span>`
+          : isOffline
+            ? `<span class="px-2 py-0.5 rounded-md text-[11px] font-bold bg-stone-200 text-slate-600">⏸️ Tidak Aktif (${secAgo}d)</span>`
+            : `<span class="px-2 py-0.5 rounded-md text-[11px] font-bold bg-emerald-600 text-white animate-pulse">● Soal No. ${s.currentNo}</span>`;
+
+        return `
+          <div class="rounded-2xl border-2 ${cardBorder} p-4 shadow-2xs space-y-3 transition-all">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <div class="font-extrabold text-slate-800 text-sm sm:text-base leading-tight">${s.nama || 'Siswa'}</div>
+                <div class="text-xs text-slate-500 font-semibold mt-0.5">Kelas ${s.kelas || '-'} • Absen ${s.absen || '-'}</div>
+              </div>
+              ${phaseBadge}
+            </div>
+
+            <div class="space-y-1">
+              <div class="flex justify-between text-xs font-semibold text-slate-600">
+                <span>Progres Jawaban</span>
+                <span>${s.answered || 0} / ${s.totalQ || 50} Soal (${pct}%)</span>
+              </div>
+              <div class="w-full h-2.5 rounded-full bg-stone-200 overflow-hidden">
+                <div class="h-full bg-sunda-primary rounded-full transition-all duration-300" style="width: ${pct}%"></div>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-stone-200/70 flex items-center justify-between gap-2">
+              ${statusBadge}
+              <span class="text-[10px] font-mono text-slate-400">Update ${secAgo}d lalu</span>
+            </div>
+            ${s.phase === 'SELESAI' ? (isReviewApproved(s.sessionId)
+              ? `<button type="button" onclick="setReviewApproval('${s.sessionId}', false)" class="w-full py-2 rounded-lg bg-emerald-100 text-emerald-800 hover:bg-emerald-200 text-xs font-bold cursor-pointer">✓ Pembahasan Disetujui — klik untuk kunci lagi</button>`
+              : `<button type="button" onclick="setReviewApproval('${s.sessionId}', true)" class="w-full py-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-slate-950 text-xs font-bold cursor-pointer">🔓 Setujui Pembahasan</button>`) : ''}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // =========================================================================
+    // 10. SETUP MODAL (GOOGLE APPS SCRIPT URL) & TOAST HELPER
+    // =========================================================================
+    function openSetupModal() {
+      document.getElementById('gasUrlInput').value = state.gasUrl;
+      document.getElementById('pingResultBox').classList.add('hidden');
+      document.getElementById('setupModal').classList.remove('hidden');
+    }
+
+    function closeSetupModal() {
+      document.getElementById('setupModal').classList.add('hidden');
+    }
+
+    function saveGasUrl() {
+      const val = document.getElementById('gasUrlInput').value.trim();
+      state.gasUrl = val;
+      localStorage.setItem(STORAGE_KEY_URL, val);
+      updateConnectionIndicator();
+      closeSetupModal();
+      showToast(val ? "URL Google Apps Script disimpan!" : "Diubah ke Penyimpanan Lokal.", "success");
+      if (state.teacherUnlocked) loadRecapData();
+    }
+
+    async function testGasConnection() {
+      const url = document.getElementById('gasUrlInput').value.trim();
+      const box = document.getElementById('pingResultBox');
+      box.classList.remove('hidden');
+
+      if (!url) {
+        box.className = "p-3 rounded-xl text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200";
+        box.textContent = "Masukkan dulu Web App URL di atas.";
+        return;
+      }
+
+      box.className = "p-3 rounded-xl text-xs font-semibold bg-stone-100 text-slate-700";
+      box.textContent = "Sedang menguji koneksi ke server Apps Script...";
+
+      try {
+        const res = await fetch(url);
+        const json = await res.json();
+        if (json && json.ok) {
+          box.className = "p-3 rounded-xl text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200";
+          box.textContent = `✓ Sukses! Respons server: "${json.msg}"`;
+        } else {
+          box.className = "p-3 rounded-xl text-xs font-semibold bg-rose-50 text-rose-800 border border-rose-200";
+          box.textContent = "Server merespons tetapi formatnya tidak sesuai.";
+        }
+      } catch (err) {
+        box.className = "p-3 rounded-xl text-xs font-semibold bg-rose-50 text-rose-800 border border-rose-200";
+        box.textContent = "Gagal terhubung. Pastikan deployment diatur 'Who has access: Anyone'.";
+      }
+    }
+
+    function clearLocalDemoData() {
+      localStorage.removeItem(STORAGE_KEY_LOCAL_RECAP);
+      showToast("Rekaman lokal sudah dihapus.", "success");
+      if (state.teacherUnlocked && !state.gasUrl) {
+        state.recapRows = [];
+        updateStatsAndTable();
+      }
+    }
+
+    function showToast(msg, type = 'info') {
+      const box = document.getElementById('toastBox');
+      const el = document.createElement('div');
+      const colors = {
+        success: 'bg-emerald-800 text-white border-emerald-600',
+        error: 'bg-rose-700 text-white border-rose-500',
+        warning: 'bg-amber-600 text-white border-amber-400',
+        info: 'bg-slate-800 text-white border-slate-600'
+      };
+      el.className = `px-4 py-3 rounded-xl shadow-lg border text-xs sm:text-sm font-semibold transition-all ${colors[type] || colors.info}`;
+      el.textContent = msg;
+      box.appendChild(el);
+      setTimeout(() => {
+        el.style.opacity = '0';
+        setTimeout(() => el.remove(), 300);
+      }, 3200);
+    }
+  </script>
+</body>
+</html>
